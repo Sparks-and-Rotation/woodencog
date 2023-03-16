@@ -1,0 +1,1 @@
+{"type":"create:deploying","ingredients":[{"type":"forge:nbt","item":"tfc:ceramic/ingot_mold","nbt":{"tank":{"Amount":100,"FluidName":"tfc:metal/silver"}}},{"tag":"tfc:chisels"}],"results":[{"item":"tfc:metal/ingot/silver"},{"item":"tfc:ceramic/ingot_mold","chance":0.75}]}

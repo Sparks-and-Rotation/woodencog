@@ -1,0 +1,1 @@
+{"type":"create:mixing","ingredients":[{"fluid":"tfc:metal/copper","nbt":{},"amount":90},{"fluid":"tfc:metal/zinc","nbt":{},"amount":10}],"results":[{"fluid":"tfc:metal/brass","nbt":{},"amount":100}],"heatRequirement":"heated"}
