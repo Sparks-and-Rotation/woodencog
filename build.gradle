@@ -197,10 +197,7 @@ dependencies {
     implementation fg.deobf("curse.maven:create-328085:4371807")
     implementation fg.deobf("curse.maven:flywheel-486392:4341461")
     implementation fg.deobf("curse.maven:terrafirmacraft-302973:4378409")
-    //implementation fg.deobf("curse.maven:mantle-74924:4353120")
-    //implementation fg.deobf("curse.maven:tinkers-construct-74072:4395997")
-    //implementation fg.deobf("curse.maven:tfc-create-759509:4226288")
-    //implementation fg.deobf("curse.maven:applied-energistics-2-223794:3736294")
+
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 }
 
