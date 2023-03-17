@@ -1,3 +1,53 @@
+export const nuggets = [
+    {
+        "name": "native_copper",
+        "result": "copper"
+    },
+    {
+        "name": "native_gold",
+        "result": "gold"
+    },
+    {
+        "name": "hematite",
+        "result": "cast_iron"
+    },
+    {
+        "name": "native_silver",
+        "result": "silver"
+    },
+    {
+        "name": "cassiterite",
+        "result": "tin"
+    },
+    {
+        "name": "bismuthinite",
+        "result": "bismuth"
+    },
+    {
+        "name": "garnierite",
+        "result": "nickel"
+    },
+    {
+        "name": "malachite",
+        "result": "copper"
+    },
+    {
+        "name": "magnetite",
+        "result": "cast_iron"
+    },
+    {
+        "name": "limonite",
+        "result": "cast_iron"
+    },
+    {
+        "name": "sphalerite",
+        "result": "zinc"
+    },
+    {
+        "name": "tetrahedrite",
+        "result": "copper"
+    }
+];
 export const metals = [
     "bismuth",
     "bismuth_bronze",
