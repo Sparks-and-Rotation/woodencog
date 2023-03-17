@@ -1,0 +1,1 @@
+{"type":"create:mixing","ingredients":[{"item":"tfc:ore/rich_bismuthinite"}],"results":[{"fluid":"tfc:metal/bismuth","nbt":{},"amount":35}],"heatRequirement":"heated"}

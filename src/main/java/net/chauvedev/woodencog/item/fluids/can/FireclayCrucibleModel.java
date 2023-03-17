@@ -50,10 +50,6 @@ import net.minecraftforge.fluids.FluidStack;
 
 public final class FireclayCrucibleModel implements IModelGeometry<FireclayCrucibleModel> {
     public static final Loader LOADER = new Loader();
-    private static final float NORTH_Z_COVER = 0.4685F;
-    private static final float SOUTH_Z_COVER = 0.5315F;
-    private static final float NORTH_Z_FLUID = 0.468625F;
-    private static final float SOUTH_Z_FLUID = 0.531375F;
     @Nonnull
     private final FluidStack fluid;
     private final boolean coverIsMask;
@@ -61,7 +57,7 @@ public final class FireclayCrucibleModel implements IModelGeometry<FireclayCruci
 
     public BakedModel bake(IModelConfiguration owner, ModelBakery bakery, Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelTransform, ItemOverrides overrides, ResourceLocation modelLocation) {
         FluidAttributes attributes = this.fluid.getFluid().getAttributes();
-        TextureAtlasSprite fluidSprite = !this.fluid.isEmpty() ? (TextureAtlasSprite)spriteGetter.apply(ForgeHooksClient.getBlockMaterial(attributes.getStillTexture(this.fluid))) : null;
+        TextureAtlasSprite fluidSprite = !this.fluid.isEmpty() ? spriteGetter.apply(ForgeHooksClient.getBlockMaterial(attributes.getStillTexture(this.fluid))) : null;
         Material baseLocation = owner.isTexturePresent("base") ? owner.resolveTexture("base") : null;
         TextureAtlasSprite coverSprite = (!this.coverIsMask || baseLocation != null) && owner.isTexturePresent("cover") ? (TextureAtlasSprite)spriteGetter.apply(owner.resolveTexture("cover")) : null;
         TextureAtlasSprite particleSprite;
@@ -85,7 +81,7 @@ public final class FireclayCrucibleModel implements IModelGeometry<FireclayCruci
 
         TextureAtlasSprite baseSprite;
         if (fluidSprite != null && owner.isTexturePresent("fluid")) {
-            baseSprite = (TextureAtlasSprite)spriteGetter.apply(owner.resolveTexture("fluid"));
+            baseSprite = spriteGetter.apply(owner.resolveTexture("fluid"));
             if (baseSprite != null) {
                 int luminosity = this.applyFluidLuminosity ? attributes.getLuminosity(this.fluid) : 0;
                 int color = attributes.getColor(this.fluid);
@@ -96,7 +92,7 @@ public final class FireclayCrucibleModel implements IModelGeometry<FireclayCruci
 
         if (this.coverIsMask) {
             if (coverSprite != null) {
-                baseSprite = (TextureAtlasSprite)spriteGetter.apply(baseLocation);
+                baseSprite = spriteGetter.apply(baseLocation);
                 builder.addQuads(ItemLayerModel.getLayerRenderType(false), ItemTextureQuadConverter.convertTexture(transform, coverSprite, baseSprite, 0.4685F, Direction.NORTH, -1, 2));
                 builder.addQuads(ItemLayerModel.getLayerRenderType(false), ItemTextureQuadConverter.convertTexture(transform, coverSprite, baseSprite, 0.5315F, Direction.SOUTH, -1, 2));
             }
@@ -175,7 +171,7 @@ public final class FireclayCrucibleModel implements IModelGeometry<FireclayCruci
                 Fluid fluid = FireclayCrucibleItem.getFluid(stack);
                 if (fluid != Fluids.EMPTY) {
                     FluidStack fluidStack = new FluidStack(fluid, FireclayCrucibleItem.CAPACITY, FireclayCrucibleItem.getFluidTag(stack));
-                    return (BakedModel)this.cache.computeIfAbsent(fluidStack, this::getUncahcedModel);
+                    return this.cache.computeIfAbsent(fluidStack, this::getUncahcedModel);
                 } else {
                     return originalModel;
                 }

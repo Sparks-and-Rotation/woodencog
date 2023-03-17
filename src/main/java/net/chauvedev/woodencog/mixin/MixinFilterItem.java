@@ -14,11 +14,6 @@ public class MixinFilterItem {
 
     /**
      * Trick to enable bucket filter for tfc
-     * @param world
-     * @param stack
-     * @param filter
-     * @param matchNBT
-     * @param cir
      */
     @Inject(
             method = {"test(Lnet/minecraft/world/level/Level;Lnet/minecraftforge/fluids/FluidStack;Lnet/minecraft/world/item/ItemStack;Z)Z"},

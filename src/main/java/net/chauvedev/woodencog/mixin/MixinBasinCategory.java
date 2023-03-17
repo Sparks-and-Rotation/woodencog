@@ -48,7 +48,7 @@ public abstract class MixinBasinCategory {
         HeatCondition requiredHeat = recipe.getRequiredHeat();
         if (requiredHeat != HeatCondition.NONE) {
             int heat = requiredHeat == HeatCondition.HEATED ? 7 : 10;
-            MutableComponent color = ((HeatTooltipStyle) TFCConfig.CLIENT.heatTooltipStyle.get()).formatColored(Heat.values()[heat].getMin());
+            MutableComponent color = TFCConfig.CLIENT.heatTooltipStyle.get().formatColored(Heat.values()[heat].getMin());
             if (color != null) {
                 Minecraft mc = Minecraft.getInstance();
                 Font font = mc.font;

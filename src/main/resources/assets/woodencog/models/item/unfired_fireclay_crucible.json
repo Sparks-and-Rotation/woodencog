@@ -1,8 +1,6 @@
 {
-  "parent": "forge:item/default",
-  "loader": "woodencog:fireclay_crucible",
+  "parent": "item/generated",
   "textures": {
-    "base": "woodencog:item/fireclay_crucible",
-    "fluid": "woodencog:item/fireclay_crucible_fluid"
+    "layer0": "woodencog:item/unfired_fireclay_crucible"
   }
 }

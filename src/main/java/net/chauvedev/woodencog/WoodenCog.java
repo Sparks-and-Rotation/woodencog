@@ -3,6 +3,7 @@ package net.chauvedev.woodencog;
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.Registrate;
 import net.chauvedev.woodencog.interaction.CustomArmInteractionPointTypes;
+import net.chauvedev.woodencog.item.ModItem;
 import net.chauvedev.woodencog.item.fluids.can.FireclayCrucibleItem;
 import net.chauvedev.woodencog.item.fluids.can.FireclayCrucibleModel;
 import net.minecraft.resources.ResourceLocation;
@@ -31,6 +32,11 @@ public class WoodenCog
         MinecraftForge.EVENT_BUS.register(this);
         ModelLoaderRegistry.registerLoader(new ResourceLocation("woodencog", "fireclay_crucible"), FireclayCrucibleModel.LOADER);
         WoodenCog.REGISTRATE.item("fireclay_crucible", FireclayCrucibleItem::new)
+                .properties(properties -> properties.stacksTo(1))
+                .tab(() -> CreativeModeTab.TAB_TOOLS)
+                .register();
+
+        WoodenCog.REGISTRATE.item("unfired_fireclay_crucible", ModItem::new)
                 .properties(properties -> properties.stacksTo(1))
                 .tab(() -> CreativeModeTab.TAB_TOOLS)
                 .register();

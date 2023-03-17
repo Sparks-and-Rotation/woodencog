@@ -19,9 +19,6 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class FireclayCrucibleItem extends Item {
-    private static final String TAG_FLUID = "fluid";
-    private static final String TAG_FLUID_TAG = "fluid_tag";
-
     protected static final int CAPACITY = 100;
 
     public FireclayCrucibleItem(Item.Properties properties) {
@@ -68,7 +65,7 @@ public class FireclayCrucibleItem extends Item {
                 nbt.remove("fluid");
                 nbt.remove("fluid_tag");
                 if (nbt.isEmpty()) {
-                    stack.setTag((CompoundTag)null);
+                    stack.setTag(null);
                 }
             }
         } else {
@@ -90,7 +87,7 @@ public class FireclayCrucibleItem extends Item {
         if (nbt != null) {
             ResourceLocation location = ResourceLocation.tryParse(nbt.getString("fluid"));
             if (location != null && ForgeRegistries.FLUIDS.containsKey(location)) {
-                Fluid fluid = (Fluid)ForgeRegistries.FLUIDS.getValue(location);
+                Fluid fluid = ForgeRegistries.FLUIDS.getValue(location);
                 if (fluid != null) {
                     return fluid;
                 }
@@ -104,10 +101,5 @@ public class FireclayCrucibleItem extends Item {
     public static CompoundTag getFluidTag(ItemStack stack) {
         CompoundTag nbt = stack.getTag();
         return nbt != null && nbt.contains("fluid_tag", 10) ? nbt.getCompound("fluid_tag") : null;
-    }
-
-    public static String getSubtype(ItemStack stack) {
-        CompoundTag nbt = stack.getTag();
-        return nbt != null ? nbt.getString("fluid") : "";
     }
 }

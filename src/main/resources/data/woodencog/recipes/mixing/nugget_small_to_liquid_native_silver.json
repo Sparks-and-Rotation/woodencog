@@ -1,0 +1,1 @@
+{"type":"create:mixing","ingredients":[{"item":"tfc:ore/small_native_silver"}],"results":[{"fluid":"tfc:metal/silver","nbt":{},"amount":10}],"heatRequirement":"heated"}

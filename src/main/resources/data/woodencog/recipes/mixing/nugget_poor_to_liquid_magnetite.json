@@ -1,0 +1,1 @@
+{"type":"create:mixing","ingredients":[{"item":"tfc:ore/poor_magnetite"}],"results":[{"fluid":"tfc:metal/cast_iron","nbt":{},"amount":15}],"heatRequirement":"heated"}
