@@ -90,4 +90,3 @@ metals.forEach(name => {
 nuggets.forEach(({name, result}) => {
     generateNuggetsMelted(name, result)
 })
-//{ForgeCaps: {Parent: {heat: 0.0f, ticks: 0L}}, id: "tfc:ceramic/ingot_mold", Count: 1b, tag: {tank: {FluidName: "tfc:metal/bismuth", Amount: 100}}}
