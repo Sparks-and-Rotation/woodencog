@@ -1,0 +1,14 @@
+{
+    "type": "create:compacting",
+    "ingredients": [
+        {
+            "tag": "tfc:clay_knapping"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:ceramic/unfired_ingot_mold",
+            "count": 2
+        }
+    ]
+}

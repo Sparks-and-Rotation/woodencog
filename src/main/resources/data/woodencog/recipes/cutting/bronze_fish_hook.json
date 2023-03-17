@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:sheets/bronze"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/fish_hook/bronze"
+        }
+    ],
+    "processingTime": 400
+}

@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/bismuth_bronze"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/knife_blade/bismuth_bronze"
+        }
+    ],
+    "processingTime": 400
+}

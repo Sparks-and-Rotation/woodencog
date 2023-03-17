@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:clay_knapping",
+  "pattern": [
+    " X   ",
+    "XXXX ",
+    "XXX X",
+    "XXXX ",
+    "XXX  "
+  ],
+  "result": {
+    "item": "tfc:ceramic/unfired_jug"
+  }
+}

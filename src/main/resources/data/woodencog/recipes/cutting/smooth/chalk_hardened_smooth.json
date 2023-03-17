@@ -1,0 +1,13 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/hardened/chalk"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/smooth/chalk"
+        }
+    ]
+}

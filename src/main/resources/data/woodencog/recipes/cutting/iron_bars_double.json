@@ -1,0 +1,15 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_sheets/wrought_iron"
+        }
+    ],
+    "results": [
+        {
+            "item": "minecraft:iron_bars",
+            "count": 16
+        }
+    ],
+    "processingTime": 400
+}

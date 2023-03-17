@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:alabaster/polished/magenta"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:alabaster/polished/magenta_slab"
+        },
+        {
+            "item": "tfc:alabaster/polished/magenta_slab"
+        }
+    ]
+}

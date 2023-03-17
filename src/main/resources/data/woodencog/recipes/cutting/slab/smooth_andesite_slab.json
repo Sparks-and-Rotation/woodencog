@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/smooth/andesite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/smooth/andesite_slab"
+        },
+        {
+            "item": "tfc:rock/smooth/andesite_slab"
+        }
+    ]
+}

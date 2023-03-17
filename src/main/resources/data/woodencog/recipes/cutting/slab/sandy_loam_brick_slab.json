@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:mud_bricks/sandy_loam"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:mud_bricks/sandy_loam_slab"
+        },
+        {
+            "item": "tfc:mud_bricks/sandy_loam_slab"
+        }
+    ]
+}

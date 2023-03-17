@@ -1,0 +1,15 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/sterling_silver"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/rod/sterling_silver",
+            "count": 2
+        }
+    ],
+    "processingTime": 400
+}

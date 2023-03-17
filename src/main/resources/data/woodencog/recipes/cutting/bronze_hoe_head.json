@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/bronze"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/hoe_head/bronze"
+        }
+    ],
+    "processingTime": 400
+}

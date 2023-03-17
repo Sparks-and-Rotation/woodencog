@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:mud_bricks/silt"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:mud_bricks/silt_slab"
+        },
+        {
+            "item": "tfc:mud_bricks/silt_slab"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/blue_steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/knife_blade/blue_steel"
+        }
+    ],
+    "processingTime": 400
+}

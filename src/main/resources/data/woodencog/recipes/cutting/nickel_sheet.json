@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_ingots/nickel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/sheet/nickel"
+        }
+    ],
+    "processingTime": 400
+}

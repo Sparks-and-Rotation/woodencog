@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/copper"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/propick_head/copper"
+        }
+    ],
+    "processingTime": 400
+}

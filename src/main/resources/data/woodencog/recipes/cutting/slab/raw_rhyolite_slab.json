@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/raw/rhyolite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/raw/rhyolite_slab"
+        },
+        {
+            "item": "tfc:rock/raw/rhyolite_slab"
+        }
+    ]
+}

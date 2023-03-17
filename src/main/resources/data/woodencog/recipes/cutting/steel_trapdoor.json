@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:sheets/steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/trapdoor/steel"
+        }
+    ],
+    "processingTime": 400
+}

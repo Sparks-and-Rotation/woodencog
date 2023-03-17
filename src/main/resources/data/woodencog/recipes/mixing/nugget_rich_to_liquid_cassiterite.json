@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:ore/rich_cassiterite"}],"results":[{"fluid":"tfc:metal/tin","nbt":{},"amount":35}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/rich_cassiterite"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/tin",
+            "nbt": {},
+            "amount": 35
+        }
+    ],
+    "heatRequirement": "heated"
+}

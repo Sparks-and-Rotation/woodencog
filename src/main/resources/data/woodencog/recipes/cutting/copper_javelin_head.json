@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/copper"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/javelin_head/copper"
+        }
+    ],
+    "processingTime": 400
+}

@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_sheets/wrought_iron"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/shield/wrought_iron"
+        }
+    ],
+    "processingTime": 400
+}

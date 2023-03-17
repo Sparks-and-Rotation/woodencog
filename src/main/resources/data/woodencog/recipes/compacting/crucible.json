@@ -1,0 +1,13 @@
+{
+    "type": "create:compacting",
+    "ingredients": [
+        {
+            "tag": "tfc:fire_clay_knapping"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:ceramic/unfired_crucible"
+        }
+    ]
+}

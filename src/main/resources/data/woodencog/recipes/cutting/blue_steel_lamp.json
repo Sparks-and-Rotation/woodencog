@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/blue_steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/lamp/blue_steel"
+        }
+    ],
+    "processingTime": 400
+}

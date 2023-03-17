@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:metal/ingot/silver"}],"results":[{"fluid":"tfc:metal/silver","nbt":{},"amount":100}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:metal/ingot/silver"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/silver",
+            "nbt": {},
+            "amount": 100
+        }
+    ],
+    "heatRequirement": "heated"
+}

@@ -1,0 +1,15 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/gold"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/rod/gold",
+            "count": 2
+        }
+    ],
+    "processingTime": 400
+}

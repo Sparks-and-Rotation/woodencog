@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/black_steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/hammer_head/black_steel"
+        }
+    ],
+    "processingTime": 400
+}

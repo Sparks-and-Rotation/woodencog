@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:metal/ingot/tin"}],"results":[{"fluid":"tfc:metal/tin","nbt":{},"amount":100}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:metal/ingot/tin"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/tin",
+            "nbt": {},
+            "amount": 100
+        }
+    ],
+    "heatRequirement": "heated"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:metal/ingot/pig_iron"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/ingot/high_carbon_steel"
+        }
+    ],
+    "processingTime": 400
+}

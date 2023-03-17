@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_ingots/zinc"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/sheet/zinc"
+        }
+    ],
+    "processingTime": 400
+}

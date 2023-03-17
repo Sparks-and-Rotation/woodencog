@@ -1,0 +1,15 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/red_steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/chain/red_steel",
+            "count": 16
+        }
+    ],
+    "processingTime": 400
+}

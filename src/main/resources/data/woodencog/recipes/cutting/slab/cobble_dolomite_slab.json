@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/cobble/dolomite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/cobble/dolomite_slab"
+        },
+        {
+            "item": "tfc:rock/cobble/dolomite_slab"
+        }
+    ]
+}

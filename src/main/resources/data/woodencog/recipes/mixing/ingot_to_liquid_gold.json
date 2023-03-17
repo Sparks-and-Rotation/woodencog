@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:metal/ingot/gold"}],"results":[{"fluid":"tfc:metal/gold","nbt":{},"amount":100}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:metal/ingot/gold"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/gold",
+            "nbt": {},
+            "amount": 100
+        }
+    ],
+    "heatRequirement": "heated"
+}

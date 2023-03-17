@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:sheets/black_steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/unfinished_boots/black_steel"
+        }
+    ],
+    "processingTime": 400
+}

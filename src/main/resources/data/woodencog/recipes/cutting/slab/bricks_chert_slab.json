@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/bricks/chert"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/bricks/chert_slab"
+        },
+        {
+            "item": "tfc:rock/bricks/chert_slab"
+        }
+    ]
+}

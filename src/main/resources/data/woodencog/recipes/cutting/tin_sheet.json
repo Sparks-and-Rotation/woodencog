@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_ingots/tin"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/sheet/tin"
+        }
+    ],
+    "processingTime": 400
+}

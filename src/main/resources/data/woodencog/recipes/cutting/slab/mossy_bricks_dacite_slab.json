@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/mossy_bricks/dacite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/mossy_bricks/dacite_slab"
+        },
+        {
+            "item": "tfc:rock/mossy_bricks/dacite_slab"
+        }
+    ]
+}

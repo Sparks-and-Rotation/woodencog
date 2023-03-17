@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:wood/planks/sycamore"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:wood/planks/sycamore_slab"
+        },
+        {
+            "item": "tfc:wood/planks/sycamore_slab"
+        }
+    ]
+}

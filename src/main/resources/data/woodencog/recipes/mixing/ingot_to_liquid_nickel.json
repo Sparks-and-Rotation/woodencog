@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:metal/ingot/nickel"}],"results":[{"fluid":"tfc:metal/nickel","nbt":{},"amount":100}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:metal/ingot/nickel"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/nickel",
+            "nbt": {},
+            "amount": 100
+        }
+    ],
+    "heatRequirement": "heated"
+}

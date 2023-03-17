@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:alabaster/bricks/orange"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:alabaster/bricks/orange_slab"
+        },
+        {
+            "item": "tfc:alabaster/bricks/orange_slab"
+        }
+    ]
+}

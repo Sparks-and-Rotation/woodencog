@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:ore/rich_garnierite"}],"results":[{"fluid":"tfc:metal/nickel","nbt":{},"amount":35}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/rich_garnierite"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/nickel",
+            "nbt": {},
+            "amount": 35
+        }
+    ],
+    "heatRequirement": "heated"
+}

@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/raw/shale"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/raw/shale_slab"
+        },
+        {
+            "item": "tfc:rock/raw/shale_slab"
+        }
+    ]
+}

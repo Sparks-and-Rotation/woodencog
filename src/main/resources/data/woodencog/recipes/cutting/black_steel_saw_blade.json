@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/black_steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/saw_blade/black_steel"
+        }
+    ],
+    "processingTime": 400
+}

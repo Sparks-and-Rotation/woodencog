@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:ore/normal_bismuthinite"}],"results":[{"fluid":"tfc:metal/bismuth","nbt":{},"amount":25}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/normal_bismuthinite"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/bismuth",
+            "nbt": {},
+            "amount": 25
+        }
+    ],
+    "heatRequirement": "heated"
+}

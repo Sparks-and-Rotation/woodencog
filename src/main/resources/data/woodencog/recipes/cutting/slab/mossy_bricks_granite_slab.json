@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/mossy_bricks/granite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/mossy_bricks/granite_slab"
+        },
+        {
+            "item": "tfc:rock/mossy_bricks/granite_slab"
+        }
+    ]
+}

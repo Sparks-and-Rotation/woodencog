@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:smooth_sandstone/green"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:smooth_sandstone/green_slab"
+        },
+        {
+            "item": "tfc:smooth_sandstone/green_slab"
+        }
+    ]
+}

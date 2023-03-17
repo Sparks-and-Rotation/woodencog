@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/wrought_iron"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/propick_head/wrought_iron"
+        }
+    ],
+    "processingTime": 400
+}

@@ -1,0 +1,13 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/mossy_bricks/diorite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/mossy_bricks/diorite_stairs"
+        }
+    ]
+}

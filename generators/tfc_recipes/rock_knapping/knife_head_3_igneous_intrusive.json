@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:rock_knapping",
+  "outside_slot_required": false,
+  "pattern": [
+    " X X ",
+    "XX XX",
+    "XX XX",
+    "XX XX",
+    "XX XX"
+  ],
+  "result": {
+    "item": "tfc:stone/knife_head/igneous_intrusive",
+    "count": 2
+  },
+  "ingredient": {
+    "tag": "tfc:igneous_intrusive_rock"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_ingots/sterling_silver"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/sheet/sterling_silver"
+        }
+    ],
+    "processingTime": 400
+}

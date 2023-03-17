@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_ingots/rose_gold"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/sheet/rose_gold"
+        }
+    ],
+    "processingTime": 400
+}

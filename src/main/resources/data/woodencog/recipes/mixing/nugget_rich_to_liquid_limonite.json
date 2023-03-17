@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:ore/rich_limonite"}],"results":[{"fluid":"tfc:metal/cast_iron","nbt":{},"amount":35}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/rich_limonite"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/cast_iron",
+            "nbt": {},
+            "amount": 35
+        }
+    ],
+    "heatRequirement": "heated"
+}

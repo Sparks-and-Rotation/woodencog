@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_ingots/steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/mace_head/steel"
+        }
+    ],
+    "processingTime": 400
+}

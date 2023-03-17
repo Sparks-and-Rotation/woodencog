@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:metal/ingot/wrought_iron"}],"results":[{"fluid":"tfc:metal/wrought_iron","nbt":{},"amount":100}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:metal/ingot/wrought_iron"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/wrought_iron",
+            "nbt": {},
+            "amount": 100
+        }
+    ],
+    "heatRequirement": "heated"
+}

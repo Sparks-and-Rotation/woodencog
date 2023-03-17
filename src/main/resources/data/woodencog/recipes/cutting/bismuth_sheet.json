@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_ingots/bismuth"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/sheet/bismuth"
+        }
+    ],
+    "processingTime": 400
+}

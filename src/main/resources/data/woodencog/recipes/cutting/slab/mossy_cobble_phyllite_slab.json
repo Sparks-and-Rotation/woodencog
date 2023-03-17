@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/mossy_cobble/phyllite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/mossy_cobble/phyllite_slab"
+        },
+        {
+            "item": "tfc:rock/mossy_cobble/phyllite_slab"
+        }
+    ]
+}

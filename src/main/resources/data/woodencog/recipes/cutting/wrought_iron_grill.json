@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_sheets/wrought_iron"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:wrought_iron_grill"
+        }
+    ],
+    "processingTime": 400
+}

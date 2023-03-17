@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:metal/ingot/bismuth_bronze"}],"results":[{"fluid":"tfc:metal/bismuth_bronze","nbt":{},"amount":100}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:metal/ingot/bismuth_bronze"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/bismuth_bronze",
+            "nbt": {},
+            "amount": 100
+        }
+    ],
+    "heatRequirement": "heated"
+}

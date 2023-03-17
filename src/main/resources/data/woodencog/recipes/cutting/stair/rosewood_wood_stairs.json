@@ -1,0 +1,13 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:wood/planks/rosewood"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:wood/planks/rosewood_stairs"
+        }
+    ]
+}

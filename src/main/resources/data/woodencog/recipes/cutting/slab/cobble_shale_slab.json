@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/cobble/shale"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/cobble/shale_slab"
+        },
+        {
+            "item": "tfc:rock/cobble/shale_slab"
+        }
+    ]
+}

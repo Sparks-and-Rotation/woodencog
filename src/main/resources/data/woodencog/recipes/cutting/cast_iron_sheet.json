@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_ingots/cast_iron"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/sheet/cast_iron"
+        }
+    ],
+    "processingTime": 400
+}

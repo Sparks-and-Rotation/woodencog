@@ -1,0 +1,15 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/copper"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/chain/copper",
+            "count": 16
+        }
+    ],
+    "processingTime": 400
+}

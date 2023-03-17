@@ -1,0 +1,13 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/mossy_cobble/gabbro"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/mossy_cobble/gabbro_stairs"
+        }
+    ]
+}

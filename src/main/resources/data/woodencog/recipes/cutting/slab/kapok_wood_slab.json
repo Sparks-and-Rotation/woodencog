@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:wood/planks/kapok"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:wood/planks/kapok_slab"
+        },
+        {
+            "item": "tfc:wood/planks/kapok_slab"
+        }
+    ]
+}

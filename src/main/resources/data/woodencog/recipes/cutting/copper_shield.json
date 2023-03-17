@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_sheets/copper"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/shield/copper"
+        }
+    ],
+    "processingTime": 400
+}

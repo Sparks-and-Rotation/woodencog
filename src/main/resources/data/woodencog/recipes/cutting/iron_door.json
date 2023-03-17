@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:sheets/wrought_iron"
+        }
+    ],
+    "results": [
+        {
+            "item": "minecraft:iron_door"
+        }
+    ],
+    "processingTime": 400
+}

@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/axe_head/steel"
+        }
+    ],
+    "processingTime": 400
+}

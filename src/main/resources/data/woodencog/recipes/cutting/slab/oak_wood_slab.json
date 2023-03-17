@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:wood/planks/oak"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:wood/planks/oak_slab"
+        },
+        {
+            "item": "tfc:wood/planks/oak_slab"
+        }
+    ]
+}

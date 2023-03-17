@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:metal/ingot/black_bronze"}],"results":[{"fluid":"tfc:metal/black_bronze","nbt":{},"amount":100}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:metal/ingot/black_bronze"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/black_bronze",
+            "nbt": {},
+            "amount": 100
+        }
+    ],
+    "heatRequirement": "heated"
+}

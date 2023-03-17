@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/blue_steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/hoe_head/blue_steel"
+        }
+    ],
+    "processingTime": 400
+}

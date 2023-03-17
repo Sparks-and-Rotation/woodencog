@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:ore/small_native_gold"}],"results":[{"fluid":"tfc:metal/gold","nbt":{},"amount":10}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/small_native_gold"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/gold",
+            "nbt": {},
+            "amount": 10
+        }
+    ],
+    "heatRequirement": "heated"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:sheets/blue_steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/bucket/blue_steel"
+        }
+    ],
+    "processingTime": 400
+}

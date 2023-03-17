@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/mossy_bricks/dolomite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/mossy_bricks/dolomite_slab"
+        },
+        {
+            "item": "tfc:rock/mossy_bricks/dolomite_slab"
+        }
+    ]
+}

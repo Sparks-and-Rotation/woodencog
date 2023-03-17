@@ -1,0 +1,15 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/bismuth_bronze"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/rod/bismuth_bronze",
+            "count": 2
+        }
+    ],
+    "processingTime": 400
+}

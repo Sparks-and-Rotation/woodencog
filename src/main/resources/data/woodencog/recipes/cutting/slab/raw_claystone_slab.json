@@ -1,0 +1,16 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "item": "tfc:rock/raw/claystone"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:rock/raw/claystone_slab"
+        },
+        {
+            "item": "tfc:rock/raw/claystone_slab"
+        }
+    ]
+}

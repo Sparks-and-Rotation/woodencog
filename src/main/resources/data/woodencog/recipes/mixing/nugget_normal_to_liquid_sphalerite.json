@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:ore/normal_sphalerite"}],"results":[{"fluid":"tfc:metal/zinc","nbt":{},"amount":25}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/normal_sphalerite"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/zinc",
+            "nbt": {},
+            "amount": 25
+        }
+    ],
+    "heatRequirement": "heated"
+}

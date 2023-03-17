@@ -1,1 +1,16 @@
-{"type":"create:mixing","ingredients":[{"item":"tfc:ore/normal_hematite"}],"results":[{"fluid":"tfc:metal/cast_iron","nbt":{},"amount":25}],"heatRequirement":"heated"}
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/normal_hematite"
+        }
+    ],
+    "results": [
+        {
+            "fluid": "tfc:metal/cast_iron",
+            "nbt": {},
+            "amount": 25
+        }
+    ],
+    "heatRequirement": "heated"
+}

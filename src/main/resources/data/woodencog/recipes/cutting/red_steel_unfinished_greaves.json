@@ -1,0 +1,14 @@
+{
+    "type": "create:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:double_sheets/red_steel"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:metal/unfinished_greaves/red_steel"
+        }
+    ],
+    "processingTime": 400
+}

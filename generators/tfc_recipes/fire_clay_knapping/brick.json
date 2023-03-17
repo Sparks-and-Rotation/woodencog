@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:fire_clay_knapping",
+  "pattern": [
+    "XXXXX",
+    "     ",
+    "XXXXX",
+    "     ",
+    "XXXXX"
+  ],
+  "result": {
+    "item": "tfc:ceramic/unfired_fire_brick",
+    "count": 3
+  }
+}
