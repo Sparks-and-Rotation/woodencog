@@ -1,0 +1,17 @@
+{
+    "type": "create:crushing",
+    "ingredients": [
+        {
+            "item": "tfc:plant/moss"
+        }
+    ],
+    "results": [
+        {
+            "item": "minecraft:lime_dye"
+        },
+        {
+            "item": "minecraft:lime_dye"
+        }
+    ],
+    "processingTime": 400
+}

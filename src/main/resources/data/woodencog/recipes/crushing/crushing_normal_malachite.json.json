@@ -1,0 +1,26 @@
+{
+    "type": "create:crushing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/normal_malachite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:powder/malachite"
+        },
+        {
+            "item": "tfc:powder/malachite"
+        },
+        {
+            "item": "tfc:powder/malachite"
+        },
+        {
+            "item": "tfc:powder/malachite"
+        },
+        {
+            "item": "tfc:powder/malachite"
+        }
+    ],
+    "processingTime": 400
+}

@@ -1,0 +1,23 @@
+{
+    "type": "create:crushing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/sylvite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:powder/sylvite"
+        },
+        {
+            "item": "tfc:powder/sylvite"
+        },
+        {
+            "item": "tfc:powder/sylvite"
+        },
+        {
+            "item": "tfc:powder/sylvite"
+        }
+    ],
+    "processingTime": 400
+}

@@ -1,0 +1,23 @@
+{
+    "type": "create:crushing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/kaolinite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:powder/kaolinite"
+        },
+        {
+            "item": "tfc:powder/kaolinite"
+        },
+        {
+            "item": "tfc:powder/kaolinite"
+        },
+        {
+            "item": "tfc:powder/kaolinite"
+        }
+    ],
+    "processingTime": 400
+}

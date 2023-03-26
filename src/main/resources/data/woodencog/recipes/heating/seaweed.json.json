@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "tfc:groundcover/seaweed"
+    },
+    "result": "tfc:food/dried_seaweed",
+    "experience": 0,
+    "cookingtime": 200
+}

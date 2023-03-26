@@ -1,0 +1,23 @@
+{
+    "type": "create:milling",
+    "ingredients": [
+        {
+            "item": "tfc:ore/pyrite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:powder/pyrite"
+        },
+        {
+            "item": "tfc:powder/pyrite"
+        },
+        {
+            "item": "tfc:powder/pyrite"
+        },
+        {
+            "item": "tfc:powder/pyrite"
+        }
+    ],
+    "processingTime": 400
+}

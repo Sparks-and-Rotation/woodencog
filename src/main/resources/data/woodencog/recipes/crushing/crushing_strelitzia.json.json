@@ -1,0 +1,17 @@
+{
+    "type": "create:crushing",
+    "ingredients": [
+        {
+            "item": "tfc:plant/strelitzia"
+        }
+    ],
+    "results": [
+        {
+            "item": "minecraft:orange_dye"
+        },
+        {
+            "item": "minecraft:orange_dye"
+        }
+    ],
+    "processingTime": 400
+}

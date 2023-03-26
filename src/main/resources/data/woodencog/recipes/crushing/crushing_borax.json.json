@@ -1,0 +1,29 @@
+{
+    "type": "create:crushing",
+    "ingredients": [
+        {
+            "item": "tfc:ore/borax"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:powder/flux"
+        },
+        {
+            "item": "tfc:powder/flux"
+        },
+        {
+            "item": "tfc:powder/flux"
+        },
+        {
+            "item": "tfc:powder/flux"
+        },
+        {
+            "item": "tfc:powder/flux"
+        },
+        {
+            "item": "tfc:powder/flux"
+        }
+    ],
+    "processingTime": 400
+}

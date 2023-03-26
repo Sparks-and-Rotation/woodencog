@@ -1,0 +1,26 @@
+{
+    "type": "create:milling",
+    "ingredients": [
+        {
+            "item": "tfc:ore/normal_hematite"
+        }
+    ],
+    "results": [
+        {
+            "item": "tfc:powder/hematite"
+        },
+        {
+            "item": "tfc:powder/hematite"
+        },
+        {
+            "item": "tfc:powder/hematite"
+        },
+        {
+            "item": "tfc:powder/hematite"
+        },
+        {
+            "item": "tfc:powder/hematite"
+        }
+    ],
+    "processingTime": 400
+}

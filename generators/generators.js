@@ -7,6 +7,8 @@ import {generateAlloying} from "./generateAlloying.js";
 import {generateBarrelCrafts} from "./generateBarrelCrafts.js";
 import {generateChiselCrafts} from "./generateChiselCrafts.js";
 import {generateKnappingCrafts} from "./generateKnappingCrafts.js";
+import {generateHeatingCrafts} from "./generateHeatingCrafts.js";
+import {generateCrusherCrafts} from "./generateCrusherCrafts.js";
 
 export const basePath = "/home/jeantet/Projets/woodencog";
 
@@ -15,9 +17,9 @@ export const recipesPath = `${basePath}/src/main/resources/data/woodencog`;
 export const mixing_path = `${recipesPath}/recipes/mixing`;
 export const deploying_path = `${recipesPath}/recipes/deploying`;
 export const cutting_path = `${recipesPath}/recipes/cutting`;
-
 export const compacting_path = `${recipesPath}/recipes/compacting`;
-
+export const heating_path = `${recipesPath}/recipes/heating`
+export const crushing_path = `${recipesPath}/recipes/crushing`
 metals.forEach(name => {
     generateIngotsMelted(name)
     generateIngotMoldToIngot(name)
@@ -32,3 +34,5 @@ generateAlloying();
 generateBarrelCrafts();
 generateChiselCrafts();
 generateKnappingCrafts();
+generateHeatingCrafts();
+generateCrusherCrafts();
