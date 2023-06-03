@@ -1,9 +1,9 @@
 package net.chauvedev.woodencog.mixin;
 
-import com.simibubi.create.content.contraptions.processing.BasinTileEntity;
-import com.simibubi.create.content.contraptions.processing.burner.BlazeBurnerBlock;
-import com.simibubi.create.foundation.tileEntity.TileEntityBehaviour;
-import com.simibubi.create.foundation.tileEntity.behaviour.fluid.SmartFluidTankBehaviour;
+import com.simibubi.create.content.processing.basin.BasinBlockEntity;
+import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
+import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
+import com.simibubi.create.foundation.blockEntity.behaviour.fluid.SmartFluidTankBehaviour;
 import net.dries007.tfc.common.blocks.devices.CharcoalForgeBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
 
-@Mixin(value = BasinTileEntity.class, remap = false)
+@Mixin(value = BasinBlockEntity.class, remap = false)
 public abstract class MixinBasinTileEntity {
 
     @Shadow public SmartFluidTankBehaviour inputTank;
@@ -25,9 +25,9 @@ public abstract class MixinBasinTileEntity {
     }
 
 
-    @Inject(method="addBehaviours", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/foundation/tileEntity/behaviour/fluid/SmartFluidTankBehaviour;forbidInsertion()Lcom/simibubi/create/foundation/tileEntity/behaviour/fluid/SmartFluidTankBehaviour;"))
-    public void addBehaviours(List<TileEntityBehaviour> behaviours, CallbackInfo ci) {
-        this.inputTank = (new SmartFluidTankBehaviour(SmartFluidTankBehaviour.INPUT, (BasinTileEntity)(Object)this, 4, 1000, true)).whenFluidUpdates(() -> {
+    @Inject(method="addBehaviours", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/foundation/blockEntity/behaviour/fluid/SmartFluidTankBehaviour;forbidInsertion()Lcom/simibubi/create/foundation/blockEntity/behaviour/fluid/SmartFluidTankBehaviour;"))
+    public void addBehaviours(List<BlockEntityBehaviour> behaviours, CallbackInfo ci) {
+        this.inputTank = (new SmartFluidTankBehaviour(SmartFluidTankBehaviour.INPUT, (BasinBlockEntity)(Object)this, 4, 1000, true)).whenFluidUpdates(() -> {
             this.contentsChanged = true;
         });
     }

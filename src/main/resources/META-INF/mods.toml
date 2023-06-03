@@ -63,8 +63,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magn
 [[dependencies.woodencog]]
     modId="create"
     mandatory=true
-    versionRange="[0.5.0.i,)"
-    ordering="AFTER"
+    versionRange="[0.5.1.b,)"
+    ordering="BEFORE"
     side="BOTH"
 
 [[dependencies.woodencog]]

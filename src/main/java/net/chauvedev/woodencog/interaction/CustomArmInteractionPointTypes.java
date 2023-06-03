@@ -1,8 +1,8 @@
 package net.chauvedev.woodencog.interaction;
 
 import com.simibubi.create.Create;
-import com.simibubi.create.content.logistics.block.mechanicalArm.ArmInteractionPoint;
-import com.simibubi.create.content.logistics.block.mechanicalArm.ArmInteractionPointType;
+import com.simibubi.create.content.kinetics.mechanicalArm.ArmInteractionPoint;
+import com.simibubi.create.content.kinetics.mechanicalArm.ArmInteractionPointType;
 import net.dries007.tfc.common.blocks.devices.CharcoalForgeBlock;
 import net.dries007.tfc.common.blocks.devices.CrucibleBlock;
 import net.minecraft.core.BlockPos;

@@ -1,6 +1,6 @@
 package net.chauvedev.woodencog.mixin;
 
-import com.simibubi.create.content.logistics.block.mechanicalArm.ArmItem;
+import com.simibubi.create.content.kinetics.mechanicalArm.ArmItem;
 import net.dries007.tfc.common.blocks.devices.CharcoalForgeBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;

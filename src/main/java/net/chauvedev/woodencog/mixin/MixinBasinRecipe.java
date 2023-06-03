@@ -1,10 +1,10 @@
 package net.chauvedev.woodencog.mixin;
 
-import com.simibubi.create.content.contraptions.base.KineticTileEntity;
-import com.simibubi.create.content.contraptions.processing.BasinOperatingTileEntity;
-import com.simibubi.create.content.contraptions.processing.BasinRecipe;
-import com.simibubi.create.content.contraptions.processing.BasinTileEntity;
-import com.simibubi.create.foundation.utility.recipe.RecipeFinder;
+import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
+import com.simibubi.create.content.processing.basin.BasinBlockEntity;
+import com.simibubi.create.content.processing.basin.BasinOperatingBlockEntity;
+import com.simibubi.create.content.processing.basin.BasinRecipe;
+import com.simibubi.create.foundation.recipe.RecipeFinder;
 import net.chauvedev.woodencog.WoodenCog;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.crafting.Recipe;
@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Mixin(value = BasinOperatingTileEntity.class, remap = false)
-public abstract class MixinBasinRecipe extends KineticTileEntity {
+@Mixin(value = BasinOperatingBlockEntity.class, remap = false)
+public abstract class MixinBasinRecipe extends KineticBlockEntity {
     public MixinBasinRecipe(BlockEntityType<?> typeIn, BlockPos pos, BlockState state) {
         super(typeIn, pos, state);
     }
@@ -30,7 +30,7 @@ public abstract class MixinBasinRecipe extends KineticTileEntity {
      */
     @Overwrite
     protected List<Recipe<?>> getMatchingRecipes() {
-        if (this.getBasin().map(BasinTileEntity::isEmpty).orElse(true)) {
+        if (this.getBasin().map(BasinBlockEntity::isEmpty).orElse(true)) {
             return new ArrayList();
         } else {
             List<Recipe<?>> list = RecipeFinder.get(this.getRecipeCacheKey(), this.level, this::matchStaticFilters);
@@ -48,5 +48,5 @@ public abstract class MixinBasinRecipe extends KineticTileEntity {
 
     @Shadow() abstract Object getRecipeCacheKey();
 
-    @Shadow() abstract Optional<BasinTileEntity> getBasin();
+    @Shadow() abstract Optional<BasinBlockEntity> getBasin();
 }

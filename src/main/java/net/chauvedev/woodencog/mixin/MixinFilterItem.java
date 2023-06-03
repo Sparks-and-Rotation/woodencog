@@ -1,6 +1,6 @@
 package net.chauvedev.woodencog.mixin;
 
-import com.simibubi.create.content.logistics.item.filter.FilterItem;
+import com.simibubi.create.content.logistics.filter.FilterItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.fluids.FluidStack;

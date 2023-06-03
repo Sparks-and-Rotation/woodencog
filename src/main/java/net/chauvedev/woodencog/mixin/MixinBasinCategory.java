@@ -2,13 +2,12 @@ package net.chauvedev.woodencog.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.simibubi.create.compat.jei.category.BasinCategory;
-import com.simibubi.create.content.contraptions.processing.BasinRecipe;
-import com.simibubi.create.content.contraptions.processing.HeatCondition;
+import com.simibubi.create.content.processing.basin.BasinRecipe;
+import com.simibubi.create.content.processing.recipe.HeatCondition;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.recipe.IFocusGroup;
 import net.dries007.tfc.common.capabilities.heat.Heat;
-import net.dries007.tfc.config.HeatTooltipStyle;
 import net.dries007.tfc.config.TFCConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -24,10 +23,10 @@ public abstract class MixinBasinCategory {
     }
 
     @Inject(
-            method = {"setRecipe(Lmezz/jei/api/gui/builder/IRecipeLayoutBuilder;Lcom/simibubi/create/content/contraptions/processing/BasinRecipe;Lmezz/jei/api/recipe/IFocusGroup;)V"},
+            method = {"setRecipe(Lmezz/jei/api/gui/builder/IRecipeLayoutBuilder;Lcom/simibubi/create/content/processing/basin/BasinRecipe;Lmezz/jei/api/recipe/IFocusGroup;)V"},
             at = {@At(
                     value = "INVOKE",
-                    target = "Lcom/simibubi/create/content/contraptions/processing/BasinRecipe;getRequiredHeat()Lcom/simibubi/create/content/contraptions/processing/HeatCondition;"
+                    target = "Lcom/simibubi/create/content/processing/basin/BasinRecipe;getRequiredHeat()Lcom/simibubi/create/content/processing/recipe/HeatCondition;"
             )},
             cancellable = true,
             remap = false
@@ -37,7 +36,7 @@ public abstract class MixinBasinCategory {
     }
 
     @Inject(
-            method = {"draw(Lcom/simibubi/create/content/contraptions/processing/BasinRecipe;Lmezz/jei/api/gui/ingredient/IRecipeSlotsView;Lcom/mojang/blaze3d/vertex/PoseStack;DD)V"},
+            method = {"draw(Lcom/simibubi/create/content/processing/basin/BasinRecipe;Lmezz/jei/api/gui/ingredient/IRecipeSlotsView;Lcom/mojang/blaze3d/vertex/PoseStack;DD)V"},
             at = {@At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/client/gui/Font;draw(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/network/chat/Component;FFI)I"

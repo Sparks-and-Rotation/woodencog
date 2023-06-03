@@ -1,6 +1,6 @@
 package net.chauvedev.woodencog.mixin;
 
-import com.simibubi.create.content.contraptions.goggles.IHaveGoggleInformation;
+import com.simibubi.create.content.equipment.goggles.IHaveGoggleInformation;
 import net.dries007.tfc.common.blockentities.BarrelBlockEntity;
 import net.dries007.tfc.common.recipes.SealedBarrelRecipe;
 import net.dries007.tfc.util.calendar.Calendars;
