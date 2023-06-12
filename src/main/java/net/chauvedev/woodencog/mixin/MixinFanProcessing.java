@@ -24,6 +24,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Mixin(value = FanProcessing.class, remap = false)
@@ -32,16 +34,31 @@ public class MixinFanProcessing {
 
 
     private static ItemStack applyProcessingTCF(ItemStack inputStack, FanProcessing.Type type) {
-
-
-        if (!inputStack.getCapability(HeatCapability.CAPABILITY).isPresent()){
+        if (
+                !inputStack.getCapability(HeatCapability.CAPABILITY).isPresent()
+                || type.equals(FanProcessing.Type.HAUNTING)
+        ){
             return inputStack;
         }
         IHeat cap = inputStack.getCapability(HeatCapability.CAPABILITY).resolve().get();
 
 
         float itemTemp = cap.getTemperature();
-        HeatCapability.addTemp(cap, 10000);
+        if(type.equals(FanProcessing.Type.BLASTING)) {
+            HeatCapability.addTemp(cap, 1700);
+        } else if (type.equals(FanProcessing.Type.SMOKING)) {
+            HeatCapability.addTemp(cap, 200);
+        } else if (type.equals(FanProcessing.Type.NONE)) {
+            cap.setTemperature(cap.getTemperature() - 2F);
+            if(cap.getTemperature() <= 0F) {
+                cap.setTemperature(0F);
+            }
+        } else if (type.equals(FanProcessing.Type.SPLASHING)) {
+            cap.setTemperature(cap.getTemperature() - 5F);
+            if(cap.getTemperature() <= 0F) {
+                cap.setTemperature(0F);
+            }
+        }
         HeatingRecipe recipe = HeatingRecipe.getRecipe(inputStack);
 
         if (recipe!=null){
@@ -54,6 +71,9 @@ public class MixinFanProcessing {
             {
                 ItemStack output = recipe.assemble(new ItemStackInventory(inputStack));
                 FluidStack fluidStack = recipe.assembleFluid(new ItemStackInventory(inputStack));
+                if(!fluidStack.isEmpty()) {
+                    return ItemStack.EMPTY;
+                }
                 FoodCapability.applyTrait(output, FoodTraits.WOOD_GRILLED);
                 if (!output.isEmpty()){
                     output.setCount(inputStack.getCount());
@@ -75,8 +95,27 @@ public class MixinFanProcessing {
         boolean hasHeat = transported.stack.getCapability(HeatCapability.CAPABILITY).isPresent();
         if (hasHeat)
         {
-            transported.stack = MixinFanProcessing.applyProcessingTCF(transported.stack,type);
-            cir.setReturnValue(TransportedItemStackHandlerBehaviour.TransportedResult.doNothing());
+            ItemStack oldStack = transported.stack;
+            ItemStack newStack = MixinFanProcessing.applyProcessingTCF(transported.stack, type);
+            if(newStack != null) {
+                if(newStack.isEmpty()) {
+                    cir.setReturnValue(TransportedItemStackHandlerBehaviour.TransportedResult.removeItem());
+                    return;
+                }
+                if(oldStack.is(newStack.getItem())) {
+                    cir.setReturnValue(TransportedItemStackHandlerBehaviour.TransportedResult.doNothing());
+                    return;
+                } else {
+                    TransportedItemStack newTransportedStack = transported.getSimilar();
+                    newTransportedStack.stack = newStack;
+                    cir.setReturnValue(
+                            TransportedItemStackHandlerBehaviour.TransportedResult.convertTo(
+                                    newTransportedStack
+                            )
+                    );
+                    return;
+                }
+            }
             cir.cancel();
         }
     }
