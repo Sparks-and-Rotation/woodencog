@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "tfc:metal/helmet/red_steel"
+  },
+  "addition": {
+    "item": "create:copper_diving_helmet"
+  },
+  "result": {
+    "item": "create:netherite_diving_helmet"
+  }
+}

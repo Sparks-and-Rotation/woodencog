@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "tfc:metal/chestplate/red_steel"
+  },
+  "addition": {
+    "item": "create:copper_backtank"
+  },
+  "result": {
+    "item": "create:netherite_backtank"
+  }
+}

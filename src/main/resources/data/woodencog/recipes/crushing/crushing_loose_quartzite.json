@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "tfc:rock/loose/quartzite"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:quartz",
+      "chance": 0.5
+    }
+  ],
+  "processingTime": 400
+}

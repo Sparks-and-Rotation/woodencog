@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "tag": "forge:leather"
+    }
+  },
+  "result": {
+    "item": "create:belt_connector"
+  }
+}
