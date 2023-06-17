@@ -25,6 +25,8 @@ jarJar.enable()
 
 mixin {
     add sourceSets.main, "woodencog.refmap.json"
+
+    config "woodencog.mixins.json"
 }
 
 
