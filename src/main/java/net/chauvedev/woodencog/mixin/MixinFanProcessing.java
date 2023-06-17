@@ -37,11 +37,11 @@ public class MixinFanProcessing {
         if (
                 !inputStack.getCapability(HeatCapability.CAPABILITY).isPresent()
                 || type.equals(FanProcessing.Type.HAUNTING)
-        ){
+        ) {
             return inputStack;
         }
-        IHeat cap = inputStack.getCapability(HeatCapability.CAPABILITY).resolve().get();
 
+        IHeat cap = inputStack.getCapability(HeatCapability.CAPABILITY).resolve().get();
 
         float itemTemp = cap.getTemperature();
         if(type.equals(FanProcessing.Type.BLASTING)) {
@@ -59,6 +59,7 @@ public class MixinFanProcessing {
                 cap.setTemperature(0F);
             }
         }
+
         HeatingRecipe recipe = HeatingRecipe.getRecipe(inputStack);
 
         if (recipe!=null){

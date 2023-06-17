@@ -196,7 +196,7 @@ dependencies {
 
     implementation fg.deobf("curse.maven:create-328085:4550986")
     //implementation fg.deobf("curse.maven:flywheel-486392:4341461")
-    implementation fg.deobf("curse.maven:terrafirmacraft-302973:4378409")
+    implementation fg.deobf("curse.maven:terrafirmacraft-302973:4552678")
 
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 }
