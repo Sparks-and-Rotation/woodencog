@@ -4,12 +4,14 @@ import com.simibubi.create.content.kinetics.belt.behaviour.TransportedItemStackH
 import com.simibubi.create.content.kinetics.belt.transport.TransportedItemStack;
 import com.simibubi.create.content.kinetics.fan.FanProcessing;
 import net.chauvedev.woodencog.config.WoodenCogCommonConfigs;
+import net.chauvedev.woodencog.utils.ModTags;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.FoodTraits;
 import net.dries007.tfc.common.capabilities.heat.HeatCapability;
 import net.dries007.tfc.common.capabilities.heat.IHeat;
 import net.dries007.tfc.common.recipes.HeatingRecipe;
 import net.dries007.tfc.common.recipes.inventory.ItemStackInventory;
+import net.minecraft.core.Registry;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -85,6 +87,13 @@ public class MixinFanProcessing {
     )
     private static void applyProcessing(TransportedItemStack transported, Level world, FanProcessing.Type type,CallbackInfoReturnable<TransportedItemStackHandlerBehaviour.TransportedResult> cir) {
         boolean hasHeat = transported.stack.getCapability(HeatCapability.CAPABILITY).isPresent();
+        boolean isUnburnable = transported.stack.is(ModTags.Items.UNBURNABLE);
+
+        if(isUnburnable) {
+            cir.setReturnValue(TransportedItemStackHandlerBehaviour.TransportedResult.doNothing());
+            return;
+        }
+
         if (hasHeat && WoodenCogCommonConfigs.HANDLE_TEMPERATURE.get())
         {
             ItemStack oldStack = transported.stack;
@@ -124,8 +133,13 @@ public class MixinFanProcessing {
 
 
         boolean hasHeat = inputStack.getCapability(HeatCapability.CAPABILITY).isPresent();
+        boolean isUnburnable = inputStack.is(ModTags.Items.UNBURNABLE);
 
-        if (hasHeat)
+        if(isUnburnable) {
+            cir.cancel();
+        }
+
+        if (hasHeat && WoodenCogCommonConfigs.HANDLE_TEMPERATURE.get())
         {
             ItemStack result = MixinFanProcessing.applyProcessingTCF(inputStack,type);
 
