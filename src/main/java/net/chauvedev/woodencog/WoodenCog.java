@@ -1,20 +1,19 @@
 package net.chauvedev.woodencog;
 
+import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.logging.LogUtils;
-import com.simibubi.create.foundation.ponder.PonderRegistrationHelper;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.chauvedev.woodencog.commands.WoodenCogCommand;
 import net.chauvedev.woodencog.config.WoodenCogCommonConfigs;
+import net.chauvedev.woodencog.core.MachineCapacityStorage;
 import net.chauvedev.woodencog.interaction.CustomArmInteractionPointTypes;
-import net.chauvedev.woodencog.item.ModItem;
 import net.chauvedev.woodencog.item.fluids.can.FireclayCrucibleItem;
-import net.chauvedev.woodencog.item.fluids.can.FireclayCrucibleModel;
-import net.chauvedev.woodencog.ponder.Heating;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -22,7 +21,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
 
 @Mod(WoodenCog.MOD_ID)
@@ -30,12 +28,13 @@ public class WoodenCog
 {
     public static final String MOD_ID = "woodencog";
     public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
-    static final PonderRegistrationHelper PONDER_HELPER = new PonderRegistrationHelper(WoodenCog.MOD_ID);
     public static final Logger LOGGER = LogUtils.getLogger();
+    private final MachineCapacityStorage machineCapacityStorage;
 
     public WoodenCog()
     {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        CustomArmInteractionPointTypes.registerAll();
         MinecraftForge.EVENT_BUS.register(this);
 
         CustomArmInteractionPointTypes.registerAll();
@@ -50,6 +49,7 @@ public class WoodenCog
                 .tab(() -> CreativeModeTab.TAB_TOOLS)
                 .register();
 
+        machineCapacityStorage = new MachineCapacityStorage(this);
 
         if(FMLEnvironment.dist == Dist.CLIENT) {
             ModelLoaderRegistry.registerLoader(new ResourceLocation("woodencog", "fireclay_crucible"), FireclayCrucibleModel.LOADER);
@@ -64,12 +64,30 @@ public class WoodenCog
 
     private void setup(final FMLCommonSetupEvent event)
     {
+
+        BlockEntity target = null;
+
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-        LOGGER.info("HELLO from server starting");
+        LOGGER.info("machineCapacityStorage Load Config");
+        try{
+            machineCapacityStorage.loadConfig();
+        }catch (Error error){
+            LOGGER.info("machineCapacityStorage setup crash");
+            error.printStackTrace();
+        }
+    }
+
+    @SubscribeEvent
+    public void onRegisterCommandEvent(RegisterCommandsEvent event) {
+        CommandDispatcher<CommandSourceStack> commandDispatcher = event.getDispatcher();
+
+        WoodenCogCommand cogCommand = new WoodenCogCommand(this);
+        cogCommand.register(commandDispatcher);
+
     }
 }
 

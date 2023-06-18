@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "T",
+    "P"
+  ],
+  "key": {
+    "T": {
+      "item": "create:copper_casing"
+    },
+    "P": {
+      "tag": "forge:leather"
+    }
+  },
+  "result": {
+    "item": "create:spout"
+  }
+}
