@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "tfc:metal/boots/red_steel"
+  },
+  "second_input": {
+    "item": "create:copper_diving_boots"
+  },
+  "tier": 5,
+  "result": {
+    "item": "create:netherite_diving_boots"
+  }
+}

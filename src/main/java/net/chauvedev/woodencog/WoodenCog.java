@@ -7,10 +7,8 @@ import net.chauvedev.woodencog.interaction.CustomArmInteractionPointTypes;
 import net.chauvedev.woodencog.item.ModItem;
 import net.chauvedev.woodencog.item.fluids.can.FireclayCrucibleItem;
 import net.chauvedev.woodencog.item.fluids.can.FireclayCrucibleModel;
-import net.chauvedev.woodencog.item.fluids.can.HeatItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -40,7 +38,7 @@ public class WoodenCog
                 .tab(() -> CreativeModeTab.TAB_TOOLS)
                 .register();
 
-        WoodenCog.REGISTRATE.item("unfired_fireclay_crucible", HeatItem::new)
+        WoodenCog.REGISTRATE.item("unfired_fireclay_crucible", ModItem::new)
                 .properties(properties -> properties.stacksTo(1))
                 .tab(() -> CreativeModeTab.TAB_TOOLS)
                 .register();
