@@ -12,6 +12,7 @@ import net.chauvedev.woodencog.item.fluids.can.FireclayCrucibleModel;
 import net.chauvedev.woodencog.ponder.Heating;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,6 +22,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
 
 @Mod(WoodenCog.MOD_ID)
@@ -34,9 +36,10 @@ public class WoodenCog
     public WoodenCog()
     {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        CustomArmInteractionPointTypes.registerAll();
         MinecraftForge.EVENT_BUS.register(this);
-        ModelLoaderRegistry.registerLoader(new ResourceLocation("woodencog", "fireclay_crucible"), FireclayCrucibleModel.LOADER);
+
+        CustomArmInteractionPointTypes.registerAll();
+
         ItemEntry<FireclayCrucibleItem> FIRECLAY_CRUCIBLE_ITEM = WoodenCog.REGISTRATE.item("fireclay_crucible", FireclayCrucibleItem::new)
                 .properties(properties -> properties.stacksTo(1))
                 .tab(() -> CreativeModeTab.TAB_TOOLS)
@@ -47,11 +50,14 @@ public class WoodenCog
                 .tab(() -> CreativeModeTab.TAB_TOOLS)
                 .register();
 
-        PONDER_HELPER
-                .forComponents(FIRECLAY_CRUCIBLE_ITEM)
-                .addStoryBoard("heating/heat", Heating::heating)
-                .addStoryBoard("heating/cool", Heating::cooling);
 
+        if(FMLEnvironment.dist == Dist.CLIENT) {
+            ModelLoaderRegistry.registerLoader(new ResourceLocation("woodencog", "fireclay_crucible"), FireclayCrucibleModel.LOADER);
+            PONDER_HELPER
+                    .forComponents(FIRECLAY_CRUCIBLE_ITEM)
+                    .addStoryBoard("heating/heat", Heating::heating)
+                    .addStoryBoard("heating/cool", Heating::cooling);
+        }
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, WoodenCogCommonConfigs.SPEC, "woodencog-common.toml");
     }

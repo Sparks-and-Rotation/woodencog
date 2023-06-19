@@ -2,7 +2,7 @@
   "type": "create:cutting",
   "ingredients": [
     {
-      "tag": "tfc:rock/loose/andesite"
+      "tag": "tfc:igneous_extrusive_rock"
     }
   ],
   "results": [

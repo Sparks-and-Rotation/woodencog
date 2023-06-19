@@ -70,6 +70,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magn
 [[dependencies.woodencog]]
     modId="tfc"
     mandatory=true
-    versionRange="[1.18.2,)"
-    ordering="AFTER"
+    versionRange="[2.2.24,)"
+    ordering="BEFORE"
     side="BOTH"
