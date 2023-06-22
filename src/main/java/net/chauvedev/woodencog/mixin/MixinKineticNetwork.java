@@ -13,6 +13,4 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class MixinKineticNetwork {
 
 
-
-
 }
