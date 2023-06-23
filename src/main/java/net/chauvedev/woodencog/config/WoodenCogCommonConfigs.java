@@ -1,12 +1,7 @@
 package net.chauvedev.woodencog.config;
 
-import com.electronwill.nightconfig.core.Config;
-import com.electronwill.nightconfig.core.conversion.ObjectConverter;
-import com.electronwill.nightconfig.toml.TomlFormat;
-import com.google.common.collect.ImmutableList;
 import net.minecraftforge.common.ForgeConfigSpec;
 
-import java.util.HashMap;
 import java.util.List;
 
 public class WoodenCogCommonConfigs {
@@ -14,8 +9,9 @@ public class WoodenCogCommonConfigs {
     public static final ForgeConfigSpec SPEC;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> HANDLE_TEMPERATURE;
-
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> WEAR_BLACKLIST;
+    public static ForgeConfigSpec.ConfigValue<Integer> DEFAULT_DURABILITY;
+    public static ForgeConfigSpec.ConfigValue<Double> DEFAULT_DAMAGE_CHANCE;
 
     static {
         BUILDER.push("woodencog");
@@ -27,6 +23,12 @@ public class WoodenCogCommonConfigs {
         BUILDER.pop();
 
         BUILDER.push("wearing");
+        DEFAULT_DURABILITY = BUILDER
+                .comment("default durability of each machine bloc")
+                .define("durability", 5000);
+        DEFAULT_DAMAGE_CHANCE = BUILDER
+                .comment("chance of machine getting damage")
+                .define("chance", 0.1);
         WEAR_BLACKLIST = BUILDER
                 .comment("This list contains block that should not damage over time")
                 .defineList("blacklist", List.of(
@@ -46,7 +48,10 @@ public class WoodenCogCommonConfigs {
                         "create:sequenced_gearshift",
                         "create:rotation_speed_controller",
                         "create:display_board",
-                        "create:schematicannon"
+                        "create:schematicannon",
+                        "create:belt",
+                        "create:motor",
+                        "create:mechanical_pump"
                 ), entry -> true);
 
         BUILDER.pop();

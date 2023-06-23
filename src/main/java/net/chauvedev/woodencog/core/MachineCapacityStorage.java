@@ -28,7 +28,7 @@ public class MachineCapacityStorage {
 
     public boolean active = true;
 
-    public MachineCapacityStorage(WoodenCog cog){
+    public MachineCapacityStorage(){
         MachineCapacityStorage.INSTANCE = this;
         this.machineCapacityEntryMap_cache = new HashMap<>();
     }
@@ -46,12 +46,12 @@ public class MachineCapacityStorage {
             CustomBlockConfig.BlockInformation info = CustomBlockConfig.registeredBlocks.get(full);
             return MachineCapacityEntry.createEntryBlock(false,
                     info.durability,
-                    (int)(info.chance * 100)
+                    (int) (info.chance * 100)
             );
         } catch (NullPointerException e) {
             return MachineCapacityEntry.createEntryBlock(false,
-                    5000,
-                    50
+                    WoodenCogCommonConfigs.DEFAULT_DURABILITY.get(),
+                    (int) (WoodenCogCommonConfigs.DEFAULT_DAMAGE_CHANCE.get() * 100)
             );
         }
 

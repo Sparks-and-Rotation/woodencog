@@ -64,7 +64,7 @@ public class WoodenCog
                 .tab(() -> CreativeModeTab.TAB_TOOLS)
                 .register();
 
-        machineCapacityStorage = new MachineCapacityStorage(this);
+        machineCapacityStorage = new MachineCapacityStorage();
 
         if(FMLEnvironment.dist == Dist.CLIENT) {
             ModelLoaderRegistry.registerLoader(new ResourceLocation("woodencog", "fireclay_crucible"), FireclayCrucibleModel.LOADER);

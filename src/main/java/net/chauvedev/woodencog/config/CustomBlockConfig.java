@@ -39,8 +39,7 @@ public class CustomBlockConfig {
 
     private static Map<String, BlockInformation> getDefaults() {
         Map<String, BlockInformation> ret = new HashMap<>();
-        ret.put("create:shaft", new BlockInformation(100, 0.5));
-        ret.put("create:cogwheel", new BlockInformation(100, 0.5));
+        ret.put("examplemod:exampleblock", new BlockInformation(100, 0.5));
         return ret;
     }
 

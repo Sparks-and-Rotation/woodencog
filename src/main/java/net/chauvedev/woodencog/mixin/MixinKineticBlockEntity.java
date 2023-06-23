@@ -47,6 +47,17 @@ public abstract class MixinKineticBlockEntity{
 
     @Shadow public abstract void setSpeed(float speed);
 
+    @Shadow protected float capacity;
+
+    @Shadow public abstract float calculateAddedStressCapacity();
+
+    @Shadow public abstract float calculateStressApplied();
+
+    @Shadow protected float lastStressApplied;
+    @Shadow protected float lastCapacityProvided;
+
+    @Shadow public abstract void detachKinetics();
+
     boolean destroyed = false;
 
     @Inject(
@@ -62,10 +73,8 @@ public abstract class MixinKineticBlockEntity{
             error.printStackTrace();
         }
     }
+
     public void tickDamagedTick(KineticBlockEntity block){
-
-        boolean debug = block.getLevel().getBlockState( block.getBlockPos().above()).getBlock().equals(Blocks.EMERALD_BLOCK);
-
         if (!MachineCapacityStorage.getInstance().active){
             return;
         }
@@ -75,24 +84,27 @@ public abstract class MixinKineticBlockEntity{
         MachineCapacityEntry config = MachineCapacityStorage.getInstance().getCapacity(block.getBlockState().getBlock());
         MachineCapacity capacity = block.getCapability(MachineCapacityProvider.MACHINE_CAPACITY).resolve().get();
         int chance = block.getLevel().random.nextInt(0,100);
-        if (chance>(100-config.damageChance)){
-            capacity.setDurability(capacity.getDurability()+1);
-        }
 
         float left = config.durabilityMax - capacity.getDurability();
 
+        if (chance > (100-config.damageChance) && left > 0 && block.getSpeed() > 0){
+            capacity.setDurability(capacity.getDurability()+1);
+        }
+
+        left = config.durabilityMax - capacity.getDurability();
+
         if (left<10){
-            if (destroyed==false||capacity.isDestroyed()==false){
-                if (getOrCreateNetwork()!=null){
+            if (getOrCreateNetwork()!=null){
+                if (!destroyed || !capacity.isDestroyed() || this.stress != Integer.MAX_VALUE){
                     destroyed = true;
                     getOrCreateNetwork().updateCapacityFor(block,0);
-                    getOrCreateNetwork().updateStressFor(block,99999);
+                    getOrCreateNetwork().updateStressFor(block, Integer.MAX_VALUE);
                     getOrCreateNetwork().updateNetwork();
                     getOrCreateNetwork().sync();
                     capacity.setDestroyed(true);
                 }
             }
-            block.getLevel().addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE,false,block.getBlockPos().getX()+0.5f,block.getBlockPos().getY()+0.5f,block.getBlockPos().getZ()+0.5f,0,0.1,0);
+            block.getLevel().addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE,false,block.getBlockPos().getX()+0.5f,block.getBlockPos().getY()+0.5f,block.getBlockPos().getZ()+0.5f,0,0.01,0);
         }
     }
 
