@@ -39,15 +39,15 @@ public class CustomBlockConfig {
 
     private static Map<String, BlockInformation> getDefaults() {
         Map<String, BlockInformation> ret = new HashMap<>();
-        ret.put("examplemod:exampleblock", new BlockInformation(100, 0.5));
+        ret.put("examplemod:exampleblock", new BlockInformation(100, 5));
         return ret;
     }
 
     public static class BlockInformation {
         public int durability;
-        public double chance;
+        public int chance;
 
-        public BlockInformation(int durability, double chance) {
+        public BlockInformation(int durability, int chance) {
             this.durability = durability;
             this.chance = chance;
         }

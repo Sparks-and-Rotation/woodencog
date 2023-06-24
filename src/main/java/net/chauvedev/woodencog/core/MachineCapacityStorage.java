@@ -37,7 +37,6 @@ public class MachineCapacityStorage {
         Block block = blockEntity.getBlockState().getBlock();
 
         String full = block.getRegistryName().getNamespace()+":"+block.getRegistryName().getPath();
-
         return WoodenCogCommonConfigs.WEAR_BLACKLIST.get().contains(full);
     }
     public MachineCapacityEntry getCapacity(Block block){
@@ -46,12 +45,12 @@ public class MachineCapacityStorage {
             CustomBlockConfig.BlockInformation info = CustomBlockConfig.registeredBlocks.get(full);
             return MachineCapacityEntry.createEntryBlock(false,
                     info.durability,
-                    (int) (info.chance * 100)
+                    info.chance
             );
         } catch (NullPointerException e) {
             return MachineCapacityEntry.createEntryBlock(false,
                     WoodenCogCommonConfigs.DEFAULT_DURABILITY.get(),
-                    (int) (WoodenCogCommonConfigs.DEFAULT_DAMAGE_CHANCE.get() * 100)
+                    WoodenCogCommonConfigs.DEFAULT_DAMAGE_CHANCE.get()
             );
         }
 

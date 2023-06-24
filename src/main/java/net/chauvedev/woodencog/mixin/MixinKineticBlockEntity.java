@@ -85,12 +85,13 @@ public abstract class MixinKineticBlockEntity{
         }
         MachineCapacityEntry config = MachineCapacityStorage.getInstance().getCapacity(block.getBlockState().getBlock());
         MachineCapacity capacity = block.getCapability(MachineCapacityProvider.MACHINE_CAPACITY).resolve().get();
-        int chance = block.getLevel().random.nextInt(0,100);
+        int chance = block.getLevel().random.nextInt(0,101);
 
         float left = config.durabilityMax - capacity.getDurability();
 
         if (chance > (100-config.damageChance) && left > 0 && block.getSpeed() > 0){
-            capacity.setDurability(capacity.getDurability()+getSpeed());
+            int damage_for_speed = (int) getSpeed()/10;
+            capacity.setDurability(capacity.getDurability()+damage_for_speed);
         }
 
         left = config.durabilityMax - capacity.getDurability();
