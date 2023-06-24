@@ -58,6 +58,8 @@ public abstract class MixinKineticBlockEntity{
 
     @Shadow public abstract void detachKinetics();
 
+    @Shadow public abstract float getSpeed();
+
     boolean destroyed = false;
 
     @Inject(
@@ -88,7 +90,7 @@ public abstract class MixinKineticBlockEntity{
         float left = config.durabilityMax - capacity.getDurability();
 
         if (chance > (100-config.damageChance) && left > 0 && block.getSpeed() > 0){
-            capacity.setDurability(capacity.getDurability()+1);
+            capacity.setDurability(capacity.getDurability()+getSpeed());
         }
 
         left = config.durabilityMax - capacity.getDurability();
