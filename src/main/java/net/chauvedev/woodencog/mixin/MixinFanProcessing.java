@@ -3,6 +3,7 @@ package net.chauvedev.woodencog.mixin;
 import com.simibubi.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour;
 import com.simibubi.create.content.kinetics.belt.transport.TransportedItemStack;
 import com.simibubi.create.content.kinetics.fan.FanProcessing;
+import net.chauvedev.woodencog.config.CustomBlockConfig;
 import net.chauvedev.woodencog.config.WoodenCogCommonConfigs;
 import net.chauvedev.woodencog.utils.ModTags;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
@@ -20,6 +21,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.Map;
 
 @Mixin(value = FanProcessing.class, remap = false)
 public class MixinFanProcessing {
@@ -86,6 +89,12 @@ public class MixinFanProcessing {
             cancellable = true
     )
     private static void applyProcessing(TransportedItemStack transported, Level world, FanProcessing.Type type,CallbackInfoReturnable<TransportedItemStackHandlerBehaviour.TransportedResult> cir) {
+        CustomBlockConfig.registeredBlocks.forEach((s, blockInformation) -> {
+            System.out.println(s);
+        });
+
+        CustomBlockConfig.registeredBlocks.get("create:shaft");
+
         boolean hasHeat = transported.stack.getCapability(HeatCapability.CAPABILITY).isPresent();
         boolean isUnburnable = transported.stack.is(ModTags.Items.UNBURNABLE);
 
