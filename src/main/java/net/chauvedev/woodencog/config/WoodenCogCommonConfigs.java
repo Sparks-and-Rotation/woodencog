@@ -11,7 +11,7 @@ public class WoodenCogCommonConfigs {
     public static final ForgeConfigSpec.ConfigValue<Boolean> HANDLE_TEMPERATURE;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> WEAR_BLACKLIST;
     public static ForgeConfigSpec.ConfigValue<Integer> DEFAULT_DURABILITY;
-    public static ForgeConfigSpec.ConfigValue<Double> DEFAULT_DAMAGE_CHANCE;
+    public static ForgeConfigSpec.ConfigValue<Integer> DEFAULT_DAMAGE_CHANCE;
 
     static {
         BUILDER.push("woodencog");
@@ -24,11 +24,11 @@ public class WoodenCogCommonConfigs {
 
         BUILDER.push("wearing");
         DEFAULT_DURABILITY = BUILDER
-                .comment("default durability of each machine bloc")
-                .define("durability", 5000);
+                .comment("default durability of each machine bloc (144000 allow a machine to run at 256rpm for ~1H at 10% chance")
+                .define("durability", 144000);
         DEFAULT_DAMAGE_CHANCE = BUILDER
-                .comment("chance of machine getting damage")
-                .define("chance", 0.1);
+                .comment("chance of machine getting damage (from 0 to 100 number over 100 are the same as 100)")
+                .define("chance", 10);
         WEAR_BLACKLIST = BUILDER
                 .comment("This list contains block that should not damage over time")
                 .defineList("blacklist", List.of(
@@ -50,7 +50,7 @@ public class WoodenCogCommonConfigs {
                         "create:display_board",
                         "create:schematicannon",
                         "create:belt",
-                        "create:motor",
+                        "create:creative_motor",
                         "create:mechanical_pump"
                 ), entry -> true);
 
