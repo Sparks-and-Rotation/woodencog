@@ -93,6 +93,10 @@ public abstract class MixinKineticBlockEntity{
 
         left = config.durabilityMax - capacity.getDurability();
 
+        if(left >= 10 && left < config.durabilityMax/2) {
+            block.getLevel().addParticle(ParticleTypes.SMOKE,false,block.getBlockPos().getX()+0.5f,block.getBlockPos().getY()+0.5f,block.getBlockPos().getZ()+0.5f,0,0.01,0);
+        }
+
         if (left<10){
             if (getOrCreateNetwork()!=null){
                 if (!destroyed || !capacity.isDestroyed() || this.stress != Integer.MAX_VALUE){
