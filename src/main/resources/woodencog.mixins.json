@@ -15,7 +15,8 @@
     "MixinFanProcessing",
     "MixinNetheriteDivingHandler",
     "recipes.MixinFillingBySpout",
-    "recipes.MixinRecipeApplier"
+    "recipes.MixinRecipeApplier",
+    "MixinAnimatedBlazeBurner"
   ],
   "minVersion": "0.8.5"
 }
