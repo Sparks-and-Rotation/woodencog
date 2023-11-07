@@ -79,6 +79,37 @@ export const metals = [
     "unknown"
 ];
 
+export const metal_temps = {
+    "bismuth": 270,
+    "bismuth_bronze": 985,
+    "black_bronze": 1070,
+    "bronze": 950,
+    "brass": 930,
+    "copper": 1080,
+    "gold": 1060,
+    "nickel": 1453,
+    "rose_gold": 960,
+    "silver": 961,
+    "tin": 230,
+    "zinc": 420,
+    "sterling_silver": 950,
+    "wrought_iron": 1535,
+    "cast_iron": 1535,
+    "pig_iron": 1535,
+    "steel": 1540,
+    "black_steel": 1485,
+    "blue_steel": 1540,
+    "red_steel": 1540,
+    "weak_steel": 1540,
+    "weak_blue_steel": 1540,
+    "weak_red_steel": 1540,
+    "high_carbon_steel": 1540,
+    "high_carbon_black_steel": 1540,
+    "high_carbon_blue_steel": 1540,
+    "high_carbon_red_steel": 1540,
+    "unknown": 400
+};
+
 export const alloys = [
     {
         name: "bismuth_bronze",

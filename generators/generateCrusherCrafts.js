@@ -16,10 +16,16 @@ export const generateCrusherCrafts = () => {
         let isTag = false;
         let ingredient = json.ingredient?.item;
         if(!ingredient) {
+            ingredient = json.ingredient?.ingredient?.item;
+        }
+        if(!ingredient) {
             ingredient = json.ingredient.tag
             isTag = true;
         }
-        const result = json.result.item;
+        let result = json.result.item;
+        if(!result) {
+            result = json.result.stack?.item;
+        }
         const quantity = json.result.count ?? 1
         if(ingredient === undefined || result === undefined) return;
         let data_crushing = {

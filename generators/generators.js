@@ -9,12 +9,14 @@ import {generateChiselCrafts} from "./generateChiselCrafts.js";
 import {generateKnappingCrafts} from "./generateKnappingCrafts.js";
 import {generateHeatingCrafts} from "./generateHeatingCrafts.js";
 import {generateCrusherCrafts} from "./generateCrusherCrafts.js";
+import {generateFilling} from "./generateFilling.js";
 
-export const basePath = "/home/jeantet/Projets/woodencog";
+export const basePath = "/home/jeantet/IdeaProjects/woodencog";
 
 export const tfcPaths = `${basePath}/generators/tfc_recipes`;
 export const recipesPath = `${basePath}/src/main/resources/data/woodencog`;
 export const mixing_path = `${recipesPath}/recipes/mixing`;
+export const advanced_filling_path = `${recipesPath}/recipes/advanced_filling`
 export const deploying_path = `${recipesPath}/recipes/deploying`;
 export const cutting_path = `${recipesPath}/recipes/cutting`;
 export const compacting_path = `${recipesPath}/recipes/compacting`;
@@ -36,3 +38,4 @@ generateChiselCrafts();
 generateKnappingCrafts();
 generateHeatingCrafts();
 generateCrusherCrafts();
+generateFilling();
