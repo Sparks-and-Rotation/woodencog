@@ -13,9 +13,9 @@
     "MixinCharcoalForgeBlock",
     "MixinCrucibleBlock",
     "MixinFanProcessing",
-    "MixinKineticBlock",
-    "MixinKineticBlockEntity",
-    "MixinNetheriteDivingHandler"
+    "MixinNetheriteDivingHandler",
+    "recipes.MixinFillingBySpout",
+    "recipes.MixinRecipeApplier"
   ],
   "minVersion": "0.8.5"
 }
