@@ -48,6 +48,30 @@ export const nuggets = [
         "result": "copper"
     }
 ];
+
+export const moldable_metals = [
+    "bismuth_bronze",
+    "black_bronze",
+    "bronze",
+    "copper",
+];
+
+export const moldables = [
+    "scythe_blade",
+    "mace_head",
+    "knife_blade",
+    "sword_blade",
+    "pickaxe_head",
+    "propick_head",
+    "axe_head",
+    "shovel_head",
+    "hoe_head_mold",
+    "chisel_head",
+    "hammer_head",
+    "saw_blade",
+    "javelin_head"
+]
+
 export const metals = [
     "bismuth",
     "bismuth_bronze",

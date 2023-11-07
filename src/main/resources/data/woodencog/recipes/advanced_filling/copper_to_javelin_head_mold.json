@@ -1,0 +1,33 @@
+{
+    "type": "woodencog:filling",
+    "ingredients": [
+        {
+            "item": "tfc:ceramic/javelin_head_mold"
+        },
+        {
+            "fluid": "tfc:metal/copper",
+            "nbt": {},
+            "amount": 100
+        }
+    ],
+    "results": [
+        {
+            "stack": {
+                "item": "tfc:ceramic/javelin_head_mold",
+                "nbt": {
+                    "tank": {
+                        "Amount": 100,
+                        "FluidName": "tfc:metal/copper"
+                    }
+                },
+                "count": 1
+            },
+            "modifiers": [
+                {
+                    "type": "tfc:add_heat",
+                    "temperature": 1080
+                }
+            ]
+        }
+    ]
+}

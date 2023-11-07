@@ -10,6 +10,7 @@ import {generateKnappingCrafts} from "./generateKnappingCrafts.js";
 import {generateHeatingCrafts} from "./generateHeatingCrafts.js";
 import {generateCrusherCrafts} from "./generateCrusherCrafts.js";
 import {generateFilling} from "./generateFilling.js";
+import {generateMoldToItem} from "./generateMoldToItem.js";
 
 export const basePath = "/home/jeantet/IdeaProjects/woodencog";
 
@@ -39,3 +40,4 @@ generateKnappingCrafts();
 generateHeatingCrafts();
 generateCrusherCrafts();
 generateFilling();
+generateMoldToItem();
