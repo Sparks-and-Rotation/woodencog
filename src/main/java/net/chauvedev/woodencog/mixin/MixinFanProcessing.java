@@ -2,7 +2,9 @@ package net.chauvedev.woodencog.mixin;
 
 import com.simibubi.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour;
 import com.simibubi.create.content.kinetics.belt.transport.TransportedItemStack;
-import com.simibubi.create.content.kinetics.fan.FanProcessing;
+import com.simibubi.create.content.kinetics.fan.processing.AllFanProcessingTypes;
+import com.simibubi.create.content.kinetics.fan.processing.FanProcessing;
+import com.simibubi.create.content.kinetics.fan.processing.FanProcessingType;
 import net.chauvedev.woodencog.config.CustomBlockConfig;
 import net.chauvedev.woodencog.config.WoodenCogCommonConfigs;
 import net.chauvedev.woodencog.utils.ModTags;
@@ -29,10 +31,10 @@ public class MixinFanProcessing {
 
 
 
-    private static ItemStack applyProcessingTCF(ItemStack inputStack, FanProcessing.Type type) {
+    private static ItemStack applyProcessingTCF(ItemStack inputStack, FanProcessingType type) {
         if (
                 !inputStack.getCapability(HeatCapability.CAPABILITY).isPresent()
-                || type.equals(FanProcessing.Type.HAUNTING)
+                || type.equals(AllFanProcessingTypes.HAUNTING)
         ) {
             return inputStack;
         }
@@ -40,16 +42,16 @@ public class MixinFanProcessing {
         IHeat cap = inputStack.getCapability(HeatCapability.CAPABILITY).resolve().get();
 
         float itemTemp = cap.getTemperature();
-        if(type.equals(FanProcessing.Type.BLASTING)) {
+        if(type.equals(AllFanProcessingTypes.BLASTING)) {
             HeatCapability.addTemp(cap, 1700);
-        } else if (type.equals(FanProcessing.Type.SMOKING)) {
+        } else if (type.equals(AllFanProcessingTypes.SMOKING)) {
             HeatCapability.addTemp(cap, 200);
-        } else if (type.equals(FanProcessing.Type.NONE)) {
+        } else if (type.equals(AllFanProcessingTypes.NONE)) {
             cap.setTemperature(cap.getTemperature() - 2F);
             if(cap.getTemperature() <= 0F) {
                 cap.setTemperature(0F);
             }
-        } else if (type.equals(FanProcessing.Type.SPLASHING)) {
+        } else if (type.equals(AllFanProcessingTypes.SPLASHING)) {
             cap.setTemperature(cap.getTemperature() - 5F);
             if(cap.getTemperature() <= 0F) {
                 cap.setTemperature(0F);
@@ -84,11 +86,11 @@ public class MixinFanProcessing {
     }
 
     @Inject(
-            method = {"applyProcessing(Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;Lnet/minecraft/world/level/Level;Lcom/simibubi/create/content/kinetics/fan/FanProcessing$Type;)Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour$TransportedResult;"},
+            method = {"applyProcessing(Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;Lnet/minecraft/world/level/Level;Lcom/simibubi/create/content/kinetics/fan/processing/FanProcessingType;)Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour$TransportedResult;"},
             at = {@At("HEAD")},
             cancellable = true
     )
-    private static void applyProcessing(TransportedItemStack transported, Level world, FanProcessing.Type type,CallbackInfoReturnable<TransportedItemStackHandlerBehaviour.TransportedResult> cir) {
+    private static void applyProcessing(TransportedItemStack transported, Level world, FanProcessingType type,CallbackInfoReturnable<TransportedItemStackHandlerBehaviour.TransportedResult> cir) {
         CustomBlockConfig.registeredBlocks.forEach((s, blockInformation) -> {
             System.out.println(s);
         });
@@ -132,11 +134,11 @@ public class MixinFanProcessing {
 
 
     @Inject(
-            method = {"applyProcessing(Lnet/minecraft/world/entity/item/ItemEntity;Lcom/simibubi/create/content/kinetics/fan/FanProcessing$Type;)Z"},
+            method = {"applyProcessing(Lnet/minecraft/world/entity/item/ItemEntity;Lcom/simibubi/create/content/kinetics/fan/processing/FanProcessingType;)Z"},
             at = {@At("HEAD")},
             cancellable = true
     )
-    private static void applyProcessing(ItemEntity entity, FanProcessing.Type type, CallbackInfoReturnable<Boolean> cir) {
+    private static void applyProcessing(ItemEntity entity, FanProcessingType type, CallbackInfoReturnable<Boolean> cir) {
 
         ItemStack inputStack = entity.getItem();
 

@@ -14,6 +14,7 @@ import net.chauvedev.woodencog.item.ModItem;
 import net.chauvedev.woodencog.item.fluids.can.FireclayCrucibleItem;
 import net.chauvedev.woodencog.item.fluids.can.FireclayCrucibleModel;
 import net.chauvedev.woodencog.ponder.Heating;
+import net.chauvedev.woodencog.recipes.advancedProcessingRecipe.AllAdvancedRecipeTypes;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,6 +22,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -45,12 +47,11 @@ public class WoodenCog
 
     public WoodenCog()
     {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        CustomArmInteractionPointTypes.registerAll();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
 
         CustomBlockConfig.init(new File(FMLPaths.CONFIGDIR.get().toString(), "woodencog-custom-block.json"));
-
 
         CustomArmInteractionPointTypes.registerAll();
 

@@ -13,7 +13,6 @@
     "MixinCharcoalForgeBlock",
     "MixinCrucibleBlock",
     "MixinFanProcessing",
-    "MixinFilterItem",
     "MixinKineticBlock",
     "MixinKineticBlockEntity",
     "MixinNetheriteDivingHandler"
