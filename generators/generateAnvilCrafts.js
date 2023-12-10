@@ -139,7 +139,26 @@ export const generateAnvilCrafts = () => {
             "ingredient": json.input,
             "loops": 1,
             "results": [json.result],
-            "sequence": types.map(type => anvils_translation[type](json.result.item)).flat(),
+            "sequence": [
+                {
+                    "type": "create:deploying",
+                    "ingredients": [
+                        {
+                            "item": json.result.item
+                        },
+                        {
+                            "item": json.result.item
+                        }
+                    ],
+                    "results": [
+                        {
+                            "item": json.result.item
+                        }
+                    ],
+                    "keepHeldItem": true
+                },
+                types.map(type => anvils_translation[type](json.result.item)).flat()
+            ].flat(),
             "transitionalItem": {
                 "item": json.result.item
             }
