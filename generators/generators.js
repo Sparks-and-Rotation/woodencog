@@ -23,6 +23,7 @@ export const cutting_path = `${recipesPath}/recipes/cutting`;
 export const compacting_path = `${recipesPath}/recipes/compacting`;
 export const heating_path = `${recipesPath}/recipes/heating`
 export const crushing_path = `${recipesPath}/recipes/crushing`
+export const sequenced_assembly_path = `${recipesPath}/recipes/sequenced_assembly`
 metals.forEach(name => {
     generateIngotsMelted(name)
     generateIngotMoldToIngot(name)

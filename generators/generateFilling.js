@@ -48,21 +48,21 @@ export const generateFilling = () => {
                 "type": "woodencog:filling",
                 "ingredients": [
                     {
-                        "item": `tfc:ceramic/${moldable}_mold`
+                        "item": `tfc:ceramic/${moldable.name}_mold`
                     },
                     {
                         "fluid": `tfc:metal/${metal}`,
                         "nbt": {},
-                        "amount": 100
+                        "amount": moldable.unit
                     }
                 ],
                 "results": [
                     {
                         "stack": {
-                            "item": `tfc:ceramic/${moldable}_mold`,
+                            "item": `tfc:ceramic/${moldable.name}_mold`,
                             "nbt": {
                                 "tank": {
-                                    "Amount": 100,
+                                    "Amount": moldable.unit,
                                     "FluidName": `tfc:metal/${metal}`
                                 }
                             },
@@ -77,7 +77,7 @@ export const generateFilling = () => {
                     }
                 ]
             }
-            fs.writeFileSync(`${advanced_filling_path}/${metal}_to_${moldable}_mold.json`, JSON.stringify(craft, null, 4), 'utf8')
+            fs.writeFileSync(`${advanced_filling_path}/${metal}_to_${moldable.name}_mold.json`, JSON.stringify(craft, null, 4), 'utf8')
         })
     })
 }

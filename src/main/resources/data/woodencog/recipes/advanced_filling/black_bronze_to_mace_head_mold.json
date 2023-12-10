@@ -7,7 +7,7 @@
         {
             "fluid": "tfc:metal/black_bronze",
             "nbt": {},
-            "amount": 100
+            "amount": 200
         }
     ],
     "results": [
@@ -16,7 +16,7 @@
                 "item": "tfc:ceramic/mace_head_mold",
                 "nbt": {
                     "tank": {
-                        "Amount": 100,
+                        "Amount": 200,
                         "FluidName": "tfc:metal/black_bronze"
                     }
                 },

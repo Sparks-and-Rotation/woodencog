@@ -94,7 +94,7 @@ public class MixinFillingBySpout {
 
                 SetItemStackProvider provider = AllAdvancedRecipeTypes.CACHES.get(fillingRecipe.getId().toString());
                 (results).forEach(o -> {
-                    ItemStack baseItem = provider.onResultStackSingle(stack,o);
+                    ItemStack baseItem = provider.onResultStackSingle(stack.copyWithCount(o.getCount()),o);
                     newStacks.add(baseItem);
                 });
 

@@ -13,10 +13,10 @@ export const generateMoldToItem = () => {
                         "max_temp": 200,
                         "ingredient": {
                             "type": "forge:nbt",
-                            "item": `tfc:ceramic/${moldable}_mold`,
+                            "item": `tfc:ceramic/${moldable.name}_mold`,
                             "nbt": {
                                 "tank": {
-                                    "Amount": 100,
+                                    "Amount": moldable.unit,
                                     "FluidName": `tfc:metal/${metal}`
                                 }
                             }
@@ -28,15 +28,15 @@ export const generateMoldToItem = () => {
                 ],
                 "results": [
                     {
-                        "item": `tfc:metal/${moldable}/${metal}`
+                        "item": `tfc:metal/${moldable.name}/${metal}`
                     },
                     {
-                        "item": `tfc:ceramic/${moldable}_mold`,
+                        "item": `tfc:ceramic/${moldable.name}_mold`,
                         "chance": 0.75
                     }
                 ]
             }
-            fs.writeFileSync(`${deploying_path}/${moldable}_mold_of_${metal}_to_item.json`, JSON.stringify(craft, null, 4), 'utf8')
+            fs.writeFileSync(`${deploying_path}/${moldable.name}_mold_of_${metal}_to_item.json`, JSON.stringify(craft, null, 4), 'utf8')
         })
     })
 }

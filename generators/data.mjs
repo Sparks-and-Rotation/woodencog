@@ -57,19 +57,58 @@ export const moldable_metals = [
 ];
 
 export const moldables = [
-    "scythe_blade",
-    "mace_head",
-    "knife_blade",
-    "sword_blade",
-    "pickaxe_head",
-    "propick_head",
-    "axe_head",
-    "shovel_head",
-    "hoe_head_mold",
-    "chisel_head",
-    "hammer_head",
-    "saw_blade",
-    "javelin_head"
+    {
+        name: "scythe_blade",
+        unit: 100
+    },
+    {
+        name: "mace_head",
+        unit: 200
+    },
+    {
+        name: "knife_blade",
+        unit: 100
+    },
+    {
+        name: "sword_blade",
+        unit: 200
+    },
+    {
+        name: "pickaxe_head",
+        unit: 100
+    },
+    {
+        name: "propick_head",
+        unit: 100
+    },
+    {
+        name: "axe_head",
+        unit: 100
+    },
+    {
+        name: "shovel_head",
+        unit: 100
+    },
+    {
+        name: "hoe_head",
+        unit: 100
+    },
+    {
+        name: "chisel_head",
+        unit: 100
+    },
+    {
+        name: "hammer_head",
+        unit: 100
+    },
+    {
+        name: "saw_blade",
+        unit: 100
+    },
+    {
+        name: "javelin_head",
+        unit: 100
+    }
 ]
 
 export const metals = [
