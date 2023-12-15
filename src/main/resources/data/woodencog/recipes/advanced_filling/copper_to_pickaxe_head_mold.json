@@ -14,12 +14,6 @@
         {
             "stack": {
                 "item": "tfc:ceramic/pickaxe_head_mold",
-                "nbt": {
-                    "tank": {
-                        "Amount": 100,
-                        "FluidName": "tfc:metal/copper"
-                    }
-                },
                 "count": 1
             },
             "modifiers": [

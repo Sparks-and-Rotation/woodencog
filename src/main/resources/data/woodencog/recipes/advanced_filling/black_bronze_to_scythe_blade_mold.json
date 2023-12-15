@@ -14,12 +14,6 @@
         {
             "stack": {
                 "item": "tfc:ceramic/scythe_blade_mold",
-                "nbt": {
-                    "tank": {
-                        "Amount": 100,
-                        "FluidName": "tfc:metal/black_bronze"
-                    }
-                },
                 "count": 1
             },
             "modifiers": [

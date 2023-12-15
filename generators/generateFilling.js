@@ -20,12 +20,6 @@ export const generateFilling = () => {
                 {
                     "stack": {
                         "item": "tfc:ceramic/ingot_mold",
-                        "nbt": {
-                            "tank": {
-                                "Amount": 100,
-                                "FluidName": `tfc:metal/${metal}`
-                            }
-                        },
                         "count": 1
                     },
                     "modifiers": [
@@ -60,12 +54,6 @@ export const generateFilling = () => {
                     {
                         "stack": {
                             "item": `tfc:ceramic/${moldable.name}_mold`,
-                            "nbt": {
-                                "tank": {
-                                    "Amount": moldable.unit,
-                                    "FluidName": `tfc:metal/${metal}`
-                                }
-                            },
                             "count": 1
                         },
                         "modifiers": [

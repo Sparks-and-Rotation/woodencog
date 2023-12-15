@@ -14,12 +14,6 @@
         {
             "stack": {
                 "item": "tfc:ceramic/sword_blade_mold",
-                "nbt": {
-                    "tank": {
-                        "Amount": 200,
-                        "FluidName": "tfc:metal/copper"
-                    }
-                },
                 "count": 1
             },
             "modifiers": [

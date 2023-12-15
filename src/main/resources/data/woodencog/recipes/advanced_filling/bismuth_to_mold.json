@@ -14,12 +14,6 @@
         {
             "stack": {
                 "item": "tfc:ceramic/ingot_mold",
-                "nbt": {
-                    "tank": {
-                        "Amount": 100,
-                        "FluidName": "tfc:metal/bismuth"
-                    }
-                },
                 "count": 1
             },
             "modifiers": [

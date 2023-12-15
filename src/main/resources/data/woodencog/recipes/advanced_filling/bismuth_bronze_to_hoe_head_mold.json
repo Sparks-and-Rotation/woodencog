@@ -14,12 +14,6 @@
         {
             "stack": {
                 "item": "tfc:ceramic/hoe_head_mold",
-                "nbt": {
-                    "tank": {
-                        "Amount": 100,
-                        "FluidName": "tfc:metal/bismuth_bronze"
-                    }
-                },
                 "count": 1
             },
             "modifiers": [
