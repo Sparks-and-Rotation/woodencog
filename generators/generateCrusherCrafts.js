@@ -5,13 +5,9 @@ import path from "path";
 export const generateCrusherCrafts = () => {
     const crushing_crafts = [
         ...fs.readdirSync(`${tfcPaths}/quern/`),
-        ...fs.readdirSync(`${tfcPaths}/quern/plant/`)
     ].filter(file => path.extname(file) === ".json");
     crushing_crafts.forEach(file => {
-        const fileData = fs.existsSync(path.join(`${tfcPaths}/quern/`, file)) ?
-                fs.readFileSync(path.join(`${tfcPaths}/quern/`, file))
-                :
-                fs.readFileSync(path.join(`${tfcPaths}/quern/plant/`, file));
+        const fileData = fs.readFileSync(path.join(`${tfcPaths}/quern/`, file))
         const json = JSON.parse(fileData.toString());
         let isTag = false;
         let ingredient = json.ingredient?.item;
@@ -47,7 +43,7 @@ export const generateCrusherCrafts = () => {
             ),
             "processingTime": 400
         }
-        fs.writeFileSync(`${crushing_path}/crushing_${file}.json`, JSON.stringify(data_crushing, null, 4), 'utf8')
+        fs.writeFileSync(`${crushing_path}/crushing_${file}`, JSON.stringify(data_crushing, null, 4), 'utf8')
 
         let data_milling = {
             "type": "create:milling",
@@ -68,7 +64,7 @@ export const generateCrusherCrafts = () => {
             ),
             "processingTime": 400
         }
-        fs.writeFileSync(`${crushing_path}/milling_${file}.json`, JSON.stringify(data_milling, null, 4), 'utf8')
+        fs.writeFileSync(`${crushing_path}/milling_${file}`, JSON.stringify(data_milling, null, 4), 'utf8')
 
     });
 }
