@@ -15,13 +15,7 @@
             "stack": {
                 "item": "tfc:ceramic/saw_blade_mold",
                 "count": 1
-            },
-            "modifiers": [
-                {
-                    "type": "tfc:add_heat",
-                    "temperature": 1080
-                }
-            ]
+            }
         }
     ]
 }

@@ -21,13 +21,7 @@ export const generateFilling = () => {
                     "stack": {
                         "item": "tfc:ceramic/ingot_mold",
                         "count": 1
-                    },
-                    "modifiers": [
-                        {
-                            "type": "tfc:add_heat",
-                            "temperature": metal_temps[metal]
-                        }
-                    ]
+                    }
                 }
             ]
         }
@@ -55,13 +49,7 @@ export const generateFilling = () => {
                         "stack": {
                             "item": `tfc:ceramic/${moldable.name}_mold`,
                             "count": 1
-                        },
-                        "modifiers": [
-                            {
-                                "type": "tfc:add_heat",
-                                "temperature": metal_temps[metal]
-                            }
-                        ]
+                        }
                     }
                 ]
             }

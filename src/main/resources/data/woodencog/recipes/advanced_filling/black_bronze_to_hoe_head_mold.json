@@ -15,13 +15,7 @@
             "stack": {
                 "item": "tfc:ceramic/hoe_head_mold",
                 "count": 1
-            },
-            "modifiers": [
-                {
-                    "type": "tfc:add_heat",
-                    "temperature": 1070
-                }
-            ]
+            }
         }
     ]
 }

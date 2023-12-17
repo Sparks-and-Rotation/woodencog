@@ -16,6 +16,7 @@ export const basePath = "/home/jeantet/IdeaProjects/woodencog";
 
 export const tfcPaths = `${basePath}/generators/tfc_recipes`;
 export const recipesPath = `${basePath}/src/main/resources/data/woodencog`;
+export const assetsPath = `${basePath}/src/main/resources/assets`;
 export const mixing_path = `${recipesPath}/recipes/mixing`;
 export const advanced_filling_path = `${recipesPath}/recipes/advanced_filling`
 export const deploying_path = `${recipesPath}/recipes/deploying`;

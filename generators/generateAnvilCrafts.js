@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import {cutting_path, sequenced_assembly_path, tfcPaths} from "./generators.js";
+import {assetsPath, cutting_path, sequenced_assembly_path, tfcPaths} from "./generators.js";
 
 const anvils_translation = {
     // hit two time
@@ -60,7 +60,7 @@ const anvils_translation = {
                     "item": transitional
                 },
                 {
-                    "tag": "forge:rods"
+                    "tag": "tfc:chisels"
                 }
             ],
             "results": [
@@ -134,6 +134,7 @@ export const generateAnvilCrafts = () => {
         let types = [];
         types.push(...json.rules.map(name => name.split('_')[0]));
         types = types.filter((value, index) => types.indexOf(value) === index)
+        const transitional_name = json.result.item.replace('tfc:', 'woodencog:').replace('minecraft:', 'woodencog:') + "/unfinished";
         const craft = {
             "type": "create:sequenced_assembly",
             "ingredient": json.input,
@@ -152,18 +153,22 @@ export const generateAnvilCrafts = () => {
                     ],
                     "results": [
                         {
-                            "item": json.result.item
+                            "item": transitional_name
                         }
                     ],
                     "keepHeldItem": true
                 },
-                types.map(type => anvils_translation[type](json.result.item)).flat()
+                types.map(type => anvils_translation[type](transitional_name)).flat()
             ].flat(),
             "transitionalItem": {
-                "item": json.result.item
+                "item": transitional_name
             }
         }
 
+        const texture_id = json.result.item.replace("tfc:", "tfc:item/").replace("minecraft:", "item/");
+        const path2 = transitional_name.replace("woodencog:", "").slice(0, -11);
+        fs.mkdirSync(`${assetsPath}/woodencog/models/item/${path2}/`, { recursive: true }, (err) => console.error(err))
+        fs.writeFileSync(`${assetsPath}/woodencog/models/item/${path2}/unfinished.json`, JSON.stringify({parent: texture_id}, null, 4), 'utf8');
         fs.writeFileSync(`${sequenced_assembly_path}/${file}`, JSON.stringify(craft, null, 4), 'utf8')
     });
 }
