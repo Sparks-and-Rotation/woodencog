@@ -9,6 +9,7 @@ import com.simibubi.create.foundation.fluid.FluidIngredient;
 import net.chauvedev.woodencog.recipes.advancedProcessingRecipe.AllAdvancedRecipeTypes;
 import net.chauvedev.woodencog.recipes.advancedProcessingRecipe.baseRecipes.SetItemStackProvider;
 import net.dries007.tfc.common.capabilities.MoldLike;
+import net.dries007.tfc.util.Metal;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
@@ -98,7 +99,11 @@ public class MixinFillingBySpout {
                 (results).forEach(o -> {
                     ItemStack baseItem = provider.onResultStackSingle(stack.copyWithCount(o.getCount()),o);
                     var mold = MoldLike.get(baseItem);
-                    if (mold != null) mold.fill(toFill, IFluidHandler.FluidAction.EXECUTE);
+                    if (mold != null) {
+                        mold.fill(toFill, IFluidHandler.FluidAction.EXECUTE);
+                        var metal = Metal.get(mold.getFluidInTank(0).getFluid());
+                        if (metal != null) mold.setTemperature(metal.getMeltTemperature());
+                    }
                     newStacks.add(baseItem);
                 });
 
